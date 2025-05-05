@@ -1,33 +1,3 @@
-// Primary - Cabinet Grotesk
-@mixin ts-type-primary-light {
-  font-family: "cg-light", sans-serif;
-}
-
-@mixin ts-type-primary-regular {
-  font-family: "cg-regular", sans-serif;
-}
-
-@mixin ts-type-primary-medium {
-  font-family: "cg-medium", sans-serif;
-}
-
-@mixin ts-type-primary-bold {
-  font-family: "cg-bold", sans-serif;
-}
-
-// Secondary - DM Serif Display
-@mixin ts-type-secondary-regular {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@mixin ts-type-secondary-italic {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
 /*
   1. Heading
   2. Body text - Regular
@@ -35,96 +5,102 @@
   4. Body text - Bold
 */
 
-// // 1. Heading
-// @mixin ts-type-h1 {
-//   font-size: var(--ts-type-size-28);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-38);
-// }
+// 1. Heading
+@mixin pop-type-h1 {
+  font-family: "GothamBlack", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+}
 
-// @mixin ts-type-h2 {
-//   font-size: var(--ts-type-size-24);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-34);
-// }
+@mixin pop-type-h2 {
+  font-family: "GothamBlack", sans-serif;
+  font-size: 1.375rem;
+  line-height: 2.125rem;
+}
 
-// @mixin ts-type-h3 {
-//   font-size: var(--ts-type-size-18);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-28);
-// }
+@mixin pop-type-h3 {
+  font-family: "GothamBlack", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 
-// // 2. Body text - Regular
-// @mixin ts-type-body-18-regular {
-//   font-size: var(--ts-type-size-18);
-//   font-weight: 400;
-//   line-height: var(--ts-type-line-height-28);
-// }
+@mixin pop-type-h4 {
+  font-family: "GothamBlack", sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
 
-// @mixin ts-type-body-16-regular {
-//   font-size: var(--ts-type-size-16);
-//   font-weight: 400;
-//   line-height: var(--ts-type-line-height-26);
-// }
+// 2. Body text - Regular
+@mixin pop-type-body-18-regular {
+  font-family: "GothamRegular", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 
-// @mixin ts-type-body-14-regular {
-//   font-size: var(--ts-type-size-14);
-//   font-weight: 400;
-//   line-height: var(--ts-type-line-height-24);
-// }
+@mixin pop-type-body-16-regular {
+  font-family: "GothamRegular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
-// @mixin ts-type-body-12-regular {
-//   font-size: var(--ts-type-size-12);
-//   font-weight: 400;
-//   line-height: var(--ts-type-line-height-22);
-// }
+@mixin pop-type-body-14-regular {
+  font-family: "GothamRegular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
 
-// // 3. Body text - Medium
-// @mixin ts-type-body-18-medium {
-//   font-size: var(--ts-type-size-18);
-//   font-weight: 500;
-//   line-height: var(--ts-type-line-height-28);
-// }
+@mixin pop-type-body-12-regular {
+  font-family: "GothamRegular", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
 
-// @mixin ts-type-body-16-medium {
-//   font-size: var(--ts-type-size-16);
-//   font-weight: 500;
-//   line-height: var(--ts-type-line-height-26);
-// }
+// 3. Body text - Medium
+@mixin pop-type-body-18-medium {
+  font-family: "GothamMedium", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 
-// @mixin ts-type-body-14-medium {
-//   font-size: var(--ts-type-size-14);
-//   font-weight: 500;
-//   line-height: var(--ts-type-line-height-24);
-// }
+@mixin pop-type-body-16-medium {
+  font-family: "GothamMedium", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
-// @mixin ts-type-body-12-medium {
-//   font-size: var(--ts-type-size-12);
-//   font-weight: 500;
-//   line-height: var(--ts-type-line-height-22);
-// }
+@mixin pop-type-body-14-medium {
+  font-family: "GothamMedium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
 
-// // 4. Body text - Bold
-// @mixin ts-type-body-18-bold {
-//   font-size: var(--ts-type-size-18);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-28);
-// }
+@mixin pop-type-body-12-medium {
+  font-family: "GothamMedium", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
 
-// @mixin ts-type-body-16-bold {
-//   font-size: var(--ts-type-size-16);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-26);
-// }
+// 4. Body text - Bold
+@mixin pop-type-body-18-bold {
+  font-family: "GothamBold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 
-// @mixin ts-type-body-14-bold {
-//   font-size: var(--ts-type-size-14);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-24);
-// }
+@mixin pop-type-body-16-bold {
+  font-family: "GothamBold", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
-// @mixin ts-type-body-12-bold {
-//   font-size: var(--ts-type-size-12);
-//   font-weight: 700;
-//   line-height: var(--ts-type-line-height-22);
-// }
+@mixin pop-type-body-14-bold {
+  font-family: "GothamBold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+@mixin pop-type-body-12-bold {
+  font-family: "GothamBold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}

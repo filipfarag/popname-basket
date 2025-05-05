@@ -1,44 +1,114 @@
 @use "../mixins/mixins.index" as *;
 
-// Primary - Cabinet Grotesk
-.u-type-primary-light {
-  @include ts-type-primary-light;
-}
-
-.u-type-primary-regular {
-  @include ts-type-primary-regular;
-}
-
-.u-type-primary-medium {
-  @include ts-type-primary-medium;
-}
-
-.u-type-primary-bold {
-  @include ts-type-primary-bold;
-}
-
-// Secondary - DM Serif Display
-.u-type-secondary-regular {
-  @include ts-type-secondary-regular;
-}
-
-.u-type-secondary-italic {
-  @include ts-type-secondary-italic;
-}
+/*
+  General typography classes
+*/
 
 .u-type-align-center {
   text-align: center;
 }
 
-.u-link {
-  @include ts-type-primary-medium;
-  color: var(--orange-base);
-  cursor: pointer;
-  text-decoration: underline hsl(from var(--orange-base) h s l / 0.5);
+.u-type-align-left {
+  text-align: left;
+}
 
-  &:hover {
-    color: var(--orange-dark);
-    font-weight: 500;
-    text-decoration: none;
-  }
+.u-type-align-right {
+  text-align: right;
+}
+
+.u-type-weight-medium {
+  font-weight: 500;
+}
+
+.u-type-weight-bold {
+  font-weight: 700;
+}
+
+.u-type-weight-black {
+  font-weight: 900;
+}
+
+.u-type-underline {
+  text-decoration: underline;
+}
+
+.u-type-break-word {
+  word-break: break-word;
+}
+
+/*
+  Popname typography classes
+
+  1. Heading
+  2. Body text - Regular
+  3. Body text - Medium
+  4. Body text - Bold
+*/
+
+// 1. Heading
+.u-type-h1 {
+  @include pop-type-h1;
+}
+
+.u-type-h2 {
+  @include pop-type-h2;
+}
+
+.u-type-h3 {
+  @include pop-type-h3;
+}
+
+.u-type-h4 {
+  @include pop-type-h4;
+}
+
+// 2. Body text - Regular
+.u-type-body-18-regular {
+  @include pop-type-body-18-regular;
+}
+
+.u-type-body-16-regular {
+  @include pop-type-body-16-regular;
+}
+
+.u-type-body-14-regular {
+  @include pop-type-body-14-regular;
+}
+
+.u-type-body-12-regular {
+  @include pop-type-body-12-regular;
+}
+
+// 3. Body text - Medium
+.u-type-body-18-medium {
+  @include pop-type-body-18-medium;
+}
+
+.u-type-body-16-medium {
+  @include pop-type-body-16-medium;
+}
+
+.u-type-body-14-medium {
+  @include pop-type-body-14-medium;
+}
+
+.u-type-body-12-medium {
+  @include pop-type-body-12-medium;
+}
+
+// 4. Body text - Bold
+.u-type-body-18-bold {
+  @include pop-type-body-18-bold;
+}
+
+.u-type-body-16-bold {
+  @include pop-type-body-16-bold;
+}
+
+.u-type-body-14-bold {
+  @include pop-type-body-14-bold;
+}
+
+.u-type-body-12-bold {
+  @include pop-type-body-12-bold;
 }

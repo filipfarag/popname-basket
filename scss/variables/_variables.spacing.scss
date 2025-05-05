@@ -11,7 +11,7 @@ $variables-map: ();
 {
   $rem-value: $starting-rem-value + ($i * $rem-increment);
   $px-value: $rem-value * 16; // 1rem = 16px
-  $variable-name: "--ts-space-#{$px-value}";
+  $variable-name: "--pop-space-#{$px-value}";
 
   $variables-map: map-merge(
     $variables-map,

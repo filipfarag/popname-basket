@@ -1,30 +1,82 @@
 /*
-  Every color is sorted from its darkest shade to its lightest shade.
+  Each color is arranged from its lightest shade to its darkest.
 
-  1. Primary
-  2. Neutral
+  1. Cyan
+  2. Neutral  
+  3. Red
+  4. Green
+  5. Orange
+  6. Blue
+
 */
 
 :root {
-  // 1. Primary
-  --ts-color-primary-dark-4: #000;
-  --ts-color-primary-dark-3: #000;
-  --ts-color-primary-dark-2: #000;
-  --ts-color-primary-dark-1: #000;
-  --ts-color-primary-base: #54403e;
-  --ts-color-primary-light-1: #000;
-  --ts-color-primary-light-2: #000;
-  --ts-color-primary-light-3: #000;
-  --ts-color-primary-light-4: #000;
+  // 1. Cyan
+  --pop-color-cyan-100: #e6fbfb;
+  --pop-color-cyan-200: #ccf7f7;
+  --pop-color-cyan-300: #99f0f0;
+  --pop-color-cyan-400: #4de7e7;
+  --pop-color-cyan-500: #00e0e0;
+  --pop-color-cyan-600: #00bfbf;
+  --pop-color-cyan-700: #009e9e;
+  --pop-color-cyan-800: #007f7f;
+  --pop-color-cyan-900: #005959;
 
   // 2. Neutral
-  --ts-color-neutral-dark-4: #000;
-  --ts-color-neutral-dark-3: #000;
-  --ts-color-neutral-dark-2: #000;
-  --ts-color-neutral-dark-1: #000;
-  --ts-color-neutral-base: #fff;
-  --ts-color-neutral-light-1: #000;
-  --ts-color-neutral-light-2: #000;
-  --ts-color-neutral-light-3: #000;
-  --ts-color-neutral-light-4: #000;
+  --pop-color-neutral-white: #fff;
+  --pop-color-neutral-50: #f8fafa;
+  --pop-color-neutral-100: #eef1f1;
+  --pop-color-neutral-200: #dadfe0;
+  --pop-color-neutral-300: #bfc7c8;
+  --pop-color-neutral-400: #9aa6a7;
+  --pop-color-neutral-500: #768283;
+  --pop-color-neutral-600: #545f60;
+  --pop-color-neutral-700: #3b4445;
+  --pop-color-neutral-800: #2a2f2f;
+  --pop-color-neutral-900: #151818;
+  --pop-color-neutral-black: #000;
+
+  // 3. Red
+  --pop-color-red-100: #fceaea;
+  --pop-color-red-200: #f8c6c8;
+  --pop-color-red-300: #f39497;
+  --pop-color-red-400: #ed5e64;
+  --pop-color-red-500: #e63946;
+  --pop-color-red-600: #c0303b;
+  --pop-color-red-700: #a22731;
+  --pop-color-red-800: #861d26;
+  --pop-color-red-900: #660f18;
+
+  // 4. Green
+  --pop-color-green-100: #eaf8f0;
+  --pop-color-green-200: #c6f0d9;
+  --pop-color-green-300: #93e4b7;
+  --pop-color-green-400: #5cd894;
+  --pop-color-green-500: #2aaa71;
+  --pop-color-green-600: #248e62;
+  --pop-color-green-700: #1d724f;
+  --pop-color-green-800: #15583d;
+  --pop-color-green-900: #0b3c28;
+
+  // 5. Orange
+  --pop-color-orange-100: #fff4e8;
+  --pop-color-orange-200: #ffe1c2;
+  --pop-color-orange-300: #ffc996;
+  --pop-color-orange-400: #ffb26b;
+  --pop-color-orange-500: #f4a259;
+  --pop-color-orange-600: #d68a44;
+  --pop-color-orange-700: #b86f30;
+  --pop-color-orange-800: #99541f;
+  --pop-color-orange-900: #73390f;
+
+  // 6. Blue
+  --pop-color-blue-100: #e8f2fa;
+  --pop-color-blue-200: #c3dff3;
+  --pop-color-blue-300: #92c6ec;
+  --pop-color-blue-400: #5ea9e0;
+  --pop-color-blue-500: #2978b5;
+  --pop-color-blue-600: #23669b;
+  --pop-color-blue-700: #1d5481;
+  --pop-color-blue-800: #154067;
+  --pop-color-blue-900: #0e2b4c;
 }
