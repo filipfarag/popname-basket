@@ -1,0 +1,44 @@
+@use "../mixins/mixins.index" as *;
+
+// Primary - Cabinet Grotesk
+.u-type-primary-light {
+  @include ts-type-primary-light;
+}
+
+.u-type-primary-regular {
+  @include ts-type-primary-regular;
+}
+
+.u-type-primary-medium {
+  @include ts-type-primary-medium;
+}
+
+.u-type-primary-bold {
+  @include ts-type-primary-bold;
+}
+
+// Secondary - DM Serif Display
+.u-type-secondary-regular {
+  @include ts-type-secondary-regular;
+}
+
+.u-type-secondary-italic {
+  @include ts-type-secondary-italic;
+}
+
+.u-type-align-center {
+  text-align: center;
+}
+
+.u-link {
+  @include ts-type-primary-medium;
+  color: var(--orange-base);
+  cursor: pointer;
+  text-decoration: underline hsl(from var(--orange-base) h s l / 0.5);
+
+  &:hover {
+    color: var(--orange-dark);
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

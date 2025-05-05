@@ -1,0 +1,130 @@
+// Primary - Cabinet Grotesk
+@mixin ts-type-primary-light {
+  font-family: "cg-light", sans-serif;
+}
+
+@mixin ts-type-primary-regular {
+  font-family: "cg-regular", sans-serif;
+}
+
+@mixin ts-type-primary-medium {
+  font-family: "cg-medium", sans-serif;
+}
+
+@mixin ts-type-primary-bold {
+  font-family: "cg-bold", sans-serif;
+}
+
+// Secondary - DM Serif Display
+@mixin ts-type-secondary-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin ts-type-secondary-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*
+  1. Heading
+  2. Body text - Regular
+  3. Body text - Medium
+  4. Body text - Bold
+*/
+
+// // 1. Heading
+// @mixin ts-type-h1 {
+//   font-size: var(--ts-type-size-28);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-38);
+// }
+
+// @mixin ts-type-h2 {
+//   font-size: var(--ts-type-size-24);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-34);
+// }
+
+// @mixin ts-type-h3 {
+//   font-size: var(--ts-type-size-18);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-28);
+// }
+
+// // 2. Body text - Regular
+// @mixin ts-type-body-18-regular {
+//   font-size: var(--ts-type-size-18);
+//   font-weight: 400;
+//   line-height: var(--ts-type-line-height-28);
+// }
+
+// @mixin ts-type-body-16-regular {
+//   font-size: var(--ts-type-size-16);
+//   font-weight: 400;
+//   line-height: var(--ts-type-line-height-26);
+// }
+
+// @mixin ts-type-body-14-regular {
+//   font-size: var(--ts-type-size-14);
+//   font-weight: 400;
+//   line-height: var(--ts-type-line-height-24);
+// }
+
+// @mixin ts-type-body-12-regular {
+//   font-size: var(--ts-type-size-12);
+//   font-weight: 400;
+//   line-height: var(--ts-type-line-height-22);
+// }
+
+// // 3. Body text - Medium
+// @mixin ts-type-body-18-medium {
+//   font-size: var(--ts-type-size-18);
+//   font-weight: 500;
+//   line-height: var(--ts-type-line-height-28);
+// }
+
+// @mixin ts-type-body-16-medium {
+//   font-size: var(--ts-type-size-16);
+//   font-weight: 500;
+//   line-height: var(--ts-type-line-height-26);
+// }
+
+// @mixin ts-type-body-14-medium {
+//   font-size: var(--ts-type-size-14);
+//   font-weight: 500;
+//   line-height: var(--ts-type-line-height-24);
+// }
+
+// @mixin ts-type-body-12-medium {
+//   font-size: var(--ts-type-size-12);
+//   font-weight: 500;
+//   line-height: var(--ts-type-line-height-22);
+// }
+
+// // 4. Body text - Bold
+// @mixin ts-type-body-18-bold {
+//   font-size: var(--ts-type-size-18);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-28);
+// }
+
+// @mixin ts-type-body-16-bold {
+//   font-size: var(--ts-type-size-16);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-26);
+// }
+
+// @mixin ts-type-body-14-bold {
+//   font-size: var(--ts-type-size-14);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-24);
+// }
+
+// @mixin ts-type-body-12-bold {
+//   font-size: var(--ts-type-size-12);
+//   font-weight: 700;
+//   line-height: var(--ts-type-line-height-22);
+// }

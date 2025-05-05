@@ -1,0 +1,30 @@
+/*
+  Every color is sorted from its darkest shade to its lightest shade.
+
+  1. Primary
+  2. Neutral
+*/
+
+:root {
+  // 1. Primary
+  --ts-color-primary-dark-4: #000;
+  --ts-color-primary-dark-3: #000;
+  --ts-color-primary-dark-2: #000;
+  --ts-color-primary-dark-1: #000;
+  --ts-color-primary-base: #54403e;
+  --ts-color-primary-light-1: #000;
+  --ts-color-primary-light-2: #000;
+  --ts-color-primary-light-3: #000;
+  --ts-color-primary-light-4: #000;
+
+  // 2. Neutral
+  --ts-color-neutral-dark-4: #000;
+  --ts-color-neutral-dark-3: #000;
+  --ts-color-neutral-dark-2: #000;
+  --ts-color-neutral-dark-1: #000;
+  --ts-color-neutral-base: #fff;
+  --ts-color-neutral-light-1: #000;
+  --ts-color-neutral-light-2: #000;
+  --ts-color-neutral-light-3: #000;
+  --ts-color-neutral-light-4: #000;
+}

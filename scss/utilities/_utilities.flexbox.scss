@@ -1,0 +1,118 @@
+/* Display setting */
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+/* Flex direction */
+.fd-row {
+  flex-direction: row; // Default flex value
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Justify content */
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+/* Align items */
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-stretch {
+  align-items: stretch;
+}
+
+/* Align self */
+.as-start {
+  align-self: flex-start;
+}
+
+.as-center {
+  align-self: center;
+}
+
+.as-end {
+  align-self: flex-end;
+}
+
+.as-stretch {
+  align-self: stretch;
+}
+
+/* Flex wrap */
+.fw-nowrap {
+  flex-wrap: nowrap; // Default flex value
+}
+
+.fw-wrap {
+  flex-wrap: wrap;
+}
+
+.fw-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Flex grow */
+.fg-0 {
+  flex-grow: 0; // Default flex value
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+/* Flex shrink */
+.fs-1 {
+  flex-shrink: 1; // Default flex value
+}
+
+.fs-0 {
+  flex-shrink: 0;
+}
+
+/* Other useful classes */
+.f-stretch-children {
+  > * {
+    flex: 1;
+  }
+}

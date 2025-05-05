@@ -1,0 +1,106 @@
+@use "../variables/_variables.index.scss" as *;
+
+// Mixin to generate margin utility classes
+@mixin margin-utility($rem-value) {
+  $px-value: $rem-value * 16;
+  $m: "u-m-#{$px-value}"; // Margin (all 4 sides)
+  $mt: "u-mt-#{$px-value}"; // Margin top
+  $mr: "u-mr-#{$px-value}"; // Margin right
+  $mb: "u-mb-#{$px-value}"; // Margin bottom
+  $ml: "u-ml-#{$px-value}"; // Margin left
+  $mx: "u-mx-#{$px-value}"; // Margin horizontal
+  $my: "u-my-#{$px-value}"; // Margin vertical
+
+  .#{$m} {
+    margin: #{$rem-value}rem;
+  }
+  .#{$mt} {
+    margin-top: #{$rem-value}rem;
+  }
+  .#{$mr} {
+    margin-right: #{$rem-value}rem;
+  }
+  .#{$mb} {
+    margin-bottom: #{$rem-value}rem;
+  }
+  .#{$ml} {
+    margin-left: #{$rem-value}rem;
+  }
+  .#{$mx} {
+    margin-inline: #{$rem-value}rem;
+  }
+  .#{$my} {
+    margin-block: #{$rem-value}rem;
+  }
+}
+
+// Mixin to generate padding utility classes
+@mixin padding-utility($rem-value) {
+  $px-value: $rem-value * 16;
+  $p: "u-p-#{$px-value}"; // Padding (all 4 sides)
+  $pt: "u-pt-#{$px-value}"; // Padding top
+  $pr: "u-pr-#{$px-value}"; // Padding right
+  $pb: "u-pb-#{$px-value}"; // Padding bottom
+  $pl: "u-pl-#{$px-value}"; // Padding left
+  $px: "u-px-#{$px-value}"; // Padding horizontal
+  $py: "u-py-#{$px-value}"; // Padding vertical
+
+  .#{$p} {
+    padding: #{$rem-value}rem;
+  }
+  .#{$pt} {
+    padding-top: #{$rem-value}rem;
+  }
+  .#{$pr} {
+    padding-right: #{$rem-value}rem;
+  }
+  .#{$pb} {
+    padding-bottom: #{$rem-value}rem;
+  }
+  .#{$pl} {
+    padding-left: #{$rem-value}rem;
+  }
+  .#{$px} {
+    padding-inline: #{$rem-value}rem;
+  }
+  .#{$py} {
+    padding-block: #{$rem-value}rem;
+  }
+}
+
+// Mixin to generate gap utility classes
+@mixin gap-utility($rem-value) {
+  $px-value: $rem-value * 16;
+  $g: "gap-#{$px-value}"; // Gap (row + column)
+  $rg: "row-gap-#{$px-value}"; // Row gap
+  $cg: "column-gap-#{$px-value}"; // Column gap
+
+  .#{$g} {
+    gap: #{$rem-value}rem;
+  }
+  .#{$rg} {
+    row-gap: #{$rem-value}rem;
+  }
+  .#{$cg} {
+    column-gap: #{$rem-value}rem;
+  }
+}
+
+// Final output
+@for $i
+  from 1
+  through ceil(calc(($ending-rem-value - $starting-rem-value) / $rem-increment))
+{
+  $rem-value: $starting-rem-value + ($i - 1) * 0.25;
+  @include margin-utility($rem-value);
+  @include padding-utility($rem-value);
+  @include gap-utility($rem-value);
+}
+
+.u-ml-auto {
+  margin-left: auto;
+}
+
+.u-mr-auto {
+  margin-right: auto;
+}

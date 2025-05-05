@@ -1,0 +1,28 @@
+// Generates spacing variables from 0.25rem (4px) to 6.5rem (104px) with 0.25rem (4px) increments.
+$starting-rem-value: 0;
+$ending-rem-value: 6.5;
+$rem-increment: 0.25;
+
+$variables-map: ();
+
+@for $i
+  from 0
+  through ceil(calc(($ending-rem-value - $starting-rem-value) / $rem-increment))
+{
+  $rem-value: $starting-rem-value + ($i * $rem-increment);
+  $px-value: $rem-value * 16; // 1rem = 16px
+  $variable-name: "--ts-space-#{$px-value}";
+
+  $variables-map: map-merge(
+    $variables-map,
+    (
+      $variable-name: $rem-value,
+    )
+  );
+}
+
+:root {
+  @each $variable-name, $rem-value in $variables-map {
+    #{$variable-name}: #{$rem-value}rem;
+  }
+}
