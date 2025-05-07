@@ -1,62 +1,64 @@
 @use "../mixins/mixins.index" as *;
 
-.pop-header {
-  --search-padding: var(--pop-space-12);
+html.pop-redesign {
+  .pop-header {
+    --search-padding: var(--pop-space-12);
 
-  position: relative;
-  @include flex-container($justify: space-between);
-  background-color: var(--pop-color-neutral-800);
-  height: 3.75rem; // 60px
-  padding-inline: var(--pop-space-48);
+    position: relative;
+    @include flex-container($justify: space-between);
+    background-color: var(--pop-color-neutral-800);
+    height: 3.75rem; // 60px
+    padding-inline: var(--pop-space-48);
 
-  &__links-container {
-    position: absolute;
-    @include center-x;
-    @include flex-container;
-    gap: var(--pop-space-24);
-  }
-
-  &__link {
-    @include pop-type-body-14-medium;
-    color: var(--pop-color-neutral-white);
-    text-decoration: none;
-  }
-
-  &__cart {
-    @include flex-container;
-    gap: var(--pop-space-4);
-    text-decoration: none;
-  }
-
-  &__cart-items {
-    @include flex-container;
-    @include pop-type-body-14-bold;
-    background-color: var(--pop-color-neutral-600);
-    border-radius: 1rem;
-    color: var(--pop-color-neutral-white);
-    height: 1.375rem; // 22px
-    padding-inline: var(--pop-space-12);
-  }
-
-  &__search {
-    color: var(--pop-color-neutral-800);
-    background-color: var(--pop-color-neutral-white);
-    border: none;
-    @include pop-type-body-14-medium;
-    height: 2rem; // 32px
-    outline: none;
-    padding-inline: var(--search-padding) 2.125rem;
-    width: 11.25rem; // 180px
-
-    &::placeholder {
-      @include pop-type-body-14-medium;
-      color: var(--pop-color-neutral-600);
+    &__links-container {
+      position: absolute;
+      @include center-x;
+      @include flex-container;
+      gap: var(--pop-space-24);
     }
-  }
 
-  &__search-icon {
-    position: absolute;
-    @include center-y;
-    right: var(--search-padding);
+    &__link {
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-white);
+      text-decoration: none;
+    }
+
+    &__basket {
+      @include flex-container;
+      gap: var(--pop-space-4);
+      text-decoration: none;
+    }
+
+    &__basket-items {
+      @include flex-container;
+      @include pop-type-body-14-bold;
+      background-color: var(--pop-color-neutral-600);
+      border-radius: 1rem;
+      color: var(--pop-color-neutral-white);
+      height: 1.375rem; // 22px
+      padding-inline: var(--pop-space-12);
+    }
+
+    &__search {
+      color: var(--pop-color-neutral-800);
+      background-color: var(--pop-color-neutral-white);
+      border: none;
+      @include pop-type-body-14-medium;
+      height: 2rem; // 32px
+      outline: none;
+      padding-inline: var(--search-padding) 2.125rem;
+      width: 11.25rem; // 180px
+
+      &::placeholder {
+        @include pop-type-body-14-medium;
+        color: var(--pop-color-neutral-600);
+      }
+    }
+
+    &__search-icon {
+      position: absolute;
+      @include center-y;
+      right: var(--search-padding);
+    }
   }
 }

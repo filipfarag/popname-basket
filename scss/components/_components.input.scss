@@ -1,0 +1,22 @@
+@use "../mixins/mixins.index" as *;
+
+html.pop-redesign {
+  .pop-input {
+    @include flex-container($justify: initial);
+    @include pop-type-body-14-medium;
+    color: var(--pop-color-neutral-700);
+    border: 1px solid var(--pop-color-neutral-400);
+    height: 2.625rem;
+    padding-inline: var(--pop-space-12);
+
+    &:hover,
+    &:focus {
+      border-color: var(--pop-color-neutral-500);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--pop-color-neutral-500);
+    }
+  }
+}

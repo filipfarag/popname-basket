@@ -1,0 +1,288 @@
+@use "../mixins/mixins.index" as *;
+
+// Wrapper class is used to avoid potential CSS clashes
+html.pop-redesign {
+  --container-width: 58.5rem;
+
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block: var(--pop-space-48);
+    max-width: 100%;
+    width: var(--container-width);
+  }
+
+  .step {
+    @include flex-container($direction: column);
+
+    &__number {
+      @include flex-container;
+      @include pop-type-body-16-medium;
+      background-color: transparent;
+      border: 2px solid var(--pop-color-neutral-400);
+      border-radius: 50%;
+      color: var(--pop-color-neutral-400);
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &__label {
+      @include pop-type-body-16-medium;
+      color: var(--pop-color-neutral-400);
+      margin-block: var(--pop-space-8) var(--pop-space-12);
+    }
+
+    &__timeline {
+      position: relative;
+      background-color: var(--pop-color-neutral-300);
+      height: 4px;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        @include center-y;
+        left: 0;
+        content: "";
+        background-color: var(--pop-color-neutral-100);
+        border: 4px solid var(--pop-color-neutral-300);
+        border-radius: 50%;
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+
+  .step--completed {
+    .step__number {
+      position: relative;
+      background-color: var(--pop-color-neutral-600);
+      color: var(--pop-color-neutral-600);
+      border: none;
+
+      &::after {
+        position: absolute;
+        @include center-xy;
+        content: "";
+        background-image: url("../../assets/iconset/check-medium.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    .step__label {
+      @include pop-type-body-16-medium;
+      color: var(--pop-color-neutral-600);
+    }
+
+    .step__timeline {
+      background-color: var(--pop-color-cyan-500);
+
+      &::before {
+        border: 4px solid var(--pop-color-cyan-500);
+      }
+    }
+  }
+
+  .step--current {
+    .step__number {
+      @include pop-type-body-16-bold;
+      background-color: var(--pop-color-neutral-800);
+      border: none;
+      color: var(--pop-color-neutral-white);
+    }
+
+    .step__label {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-800);
+    }
+
+    .step__timeline {
+      background-color: var(--pop-color-cyan-500);
+
+      &::before {
+        border: 4px solid var(--pop-color-cyan-500);
+      }
+    }
+  }
+
+  .step-heading {
+    @include pop-type-h1;
+    color: var(--pop-color-neutral-800);
+    margin-bottom: var(--pop-space-32);
+    text-align: center;
+  }
+
+  .basket {
+    @include flex-container($direction: column);
+    gap: var(--pop-space-8);
+    max-width: 100%;
+    width: var(--container-width);
+  }
+
+  .basket-item {
+    @include flex-container($justify: space-between);
+    background-color: var(--pop-color-neutral-white);
+    padding: var(--pop-space-24);
+    width: 100%;
+
+    &__product {
+      @include flex-container;
+      gap: var(--pop-space-24);
+    }
+
+    &__image {
+      height: 80px;
+      width: 80px;
+    }
+
+    &__label {
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-800);
+      max-width: 100%;
+      width: 11rem;
+    }
+
+    &__left {
+      @include flex-container;
+      gap: var(--pop-space-24);
+    }
+
+    &__middle {
+      @include flex-container;
+      gap: var(--pop-space-48);
+
+      .select-placeholder {
+        @include flex-container($justify: space-between);
+        @include pop-type-body-14-medium;
+        border: 1px solid var(--pop-color-neutral-400);
+        color: var(--pop-color-neutral-700);
+        cursor: pointer;
+        height: 2.125rem;
+        padding-inline: var(--pop-space-12);
+        user-select: none;
+        width: 6.25rem;
+
+        &:hover {
+          .select-placeholder__chevron {
+            fill: var(--pop-color-neutral-800);
+          }
+        }
+
+        &__chevron {
+          fill: var(--pop-color-neutral-600);
+        }
+      }
+
+      .quantity-picker {
+        @include flex-container;
+        gap: var(--pop-space-4);
+        border: 1px solid var(--pop-color-neutral-400);
+        height: 2.125rem;
+        padding: 0.125rem;
+
+        &__button {
+          all: unset;
+          @include flex-container;
+          background-color: var(--pop-color-neutral-700);
+          cursor: pointer;
+          fill: var(--pop-color-neutral-white);
+          height: 28px;
+          width: 28px;
+
+          &:hover:not(.quantity-picker__button--inactive) {
+            background-color: var(--pop-color-neutral-800);
+          }
+
+          &--inactive {
+            background-color: var(--pop-color-neutral-100);
+            fill: var(--pop-color-neutral-400);
+          }
+        }
+
+        &__amount {
+          @include flex-container;
+          @include pop-type-body-14-medium;
+          color: var(--pop-color-neutral-700);
+          cursor: default;
+          width: 28px;
+        }
+      }
+    }
+
+    &__right {
+      @include flex-container;
+      gap: var(--pop-space-36);
+    }
+
+    &__price {
+      @include pop-type-body-14-bold;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__remove {
+      @include flex-container;
+      fill: var(--pop-color-neutral-500);
+      height: 2.25rem;
+      width: 2.25rem;
+
+      &:hover {
+        background-color: var(--pop-color-red-100);
+        fill: var(--pop-color-red-500);
+      }
+    }
+  }
+
+  .basket-price {
+    @include flex-container($direction: column);
+    background-color: var(--pop-color-neutral-white);
+    width: 100%;
+
+    &__container {
+      @include flex-container($justify: initial);
+      padding: var(--pop-space-16) var(--pop-space-24);
+      width: 100%;
+
+      &:first-of-type {
+        border-bottom: 1px solid var(--pop-color-neutral-200);
+      }
+    }
+
+    &__label {
+      @include pop-type-body-16-medium;
+      color: var(--pop-color-neutral-800);
+      margin-right: auto;
+    }
+
+    &__amount {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__add-voucher {
+      @include flex-container;
+      gap: var(--pop-space-8);
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-600);
+      cursor: pointer;
+      fill: var(--pop-color-neutral-600);
+
+      &:hover {
+        color: var(--pop-color-neutral-800);
+        fill: var(--pop-color-neutral-800);
+      }
+    }
+
+    &__input {
+      margin-inline: var(--pop-space-24) var(--pop-space-8);
+      width: 16.25rem;
+    }
+  }
+
+  .basket-actions {
+    @include flex-container($justify: space-between);
+    margin-top: var(--pop-space-24);
+    width: var(--container-width);
+  }
+}

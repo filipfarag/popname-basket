@@ -29,9 +29,9 @@
         <a href="" class="pop-header__link">SLEVY</a>
       </div>
       <div class="d-flex gap-24">
-        <a href="" class="pop-header__cart">
+        <a href="" class="pop-header__basket">
           <img src="assets/iconset/bag-medium.svg" alt="Ikona nákupní tašky" />
-          <span class="pop-header__cart-items">3</span>
+          <span class="pop-header__basket-items">3</span>
         </a>
         <div class="u-position-relative">
           <input
@@ -47,7 +47,202 @@
         </div>
       </div>
     </header>
-    <main></main>
+
+    <main class="d-flex fd-column ai-center">
+      <section class="steps-container">
+        <div class="step step--completed">
+          <span class="step__number">1</span>
+          <span class="step__label">Košík</span>
+          <span class="step__timeline"></span>
+        </div>
+        <div class="step step--current">
+          <span class="step__number">2</span>
+          <span class="step__label">Dodací údaje</span>
+          <span class="step__timeline"></span>
+        </div>
+        <div class="step">
+          <span class="step__number">3</span>
+          <span class="step__label">Doprava a platba</span>
+          <span class="step__timeline"></span>
+        </div>
+        <div class="step">
+          <span class="step__number">4</span>
+          <span class="step__label">Shrnutí</span>
+          <span class="step__timeline"></span>
+        </div>
+      </section>
+
+      <p class="step-heading">Obsah tvého košíku</p>
+
+      <section class="basket">
+        <div class="basket-item">
+          <div class="basket-item__left">
+            <img
+              src="assets/placeholders/sneaker.png"
+              class="basket-item__image"
+            />
+            <span class="basket-item__label"
+              >Nike SB x Riot Dunk Low Pro QS Mahogany</span
+            >
+          </div>
+          <div class="basket-item__middle">
+            <div class="select-placeholder">
+              US 9<svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                class="select-placeholder__chevron"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                />
+              </svg>
+            </div>
+            <div class="quantity-picker">
+              <button
+                class="quantity-picker__button quantity-picker__button--inactive"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                  <path d="M2.5 9V7h12v2z" />
+                </svg>
+              </button>
+              <span class="quantity-picker__amount">1</span>
+              <button class="quantity-picker__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                  <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="basket-item__right">
+            <span class="basket-item__price">3 299 Kč</span
+            ><button class="basket-item__remove">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                <path
+                  d="M10.502 19.056l-.5-9 1.997-.111.5 9-1.997.111zm3.5-9.111l-.5 9 1.997.111.5-9-1.997-.111z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3h8v3h5v2h-1.595l-1.5 15H7.095l-1.5-15H4V6h5V3zM7.605 8l1.3 13h8.19l1.3-13H7.605zM15 5v1h-4V5h4z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="basket-item">
+          <div class="basket-item__left">
+            <img
+              src="assets/placeholders/sneaker.png"
+              class="basket-item__image"
+            />
+            <span class="basket-item__label"
+              >Nike SB x Riot Dunk Low Pro QS Mahogany</span
+            >
+          </div>
+          <div class="basket-item__middle">
+            <div class="select-placeholder">
+              US 9<svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                class="select-placeholder__chevron"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                />
+              </svg>
+            </div>
+            <div class="quantity-picker">
+              <button
+                class="quantity-picker__button quantity-picker__button--inactive"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                  <path d="M2.5 9V7h12v2z" />
+                </svg>
+              </button>
+              <span class="quantity-picker__amount">1</span>
+              <button class="quantity-picker__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                  <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="basket-item__right">
+            <span class="basket-item__price">3 299 Kč</span
+            ><button class="basket-item__remove">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                <path
+                  d="M10.502 19.056l-.5-9 1.997-.111.5 9-1.997.111zm3.5-9.111l-.5 9 1.997.111.5-9-1.997-.111z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3h8v3h5v2h-1.595l-1.5 15H7.095l-1.5-15H4V6h5V3zM7.605 8l1.3 13h8.19l1.3-13H7.605zM15 5v1h-4V5h4z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="basket-price">
+          <div class="basket-price__container">
+            <span class="basket-price__label">Cena celkem</span>
+            <span class="basket-price__amount">9 814 Kč</span>
+          </div>
+          <div class="basket-price__container">
+            <button class="basket-price__add-voucher">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+              </svg>
+              Odebrat slevový kód
+            </button>
+            <input
+              type="text"
+              placeholder="Zadej číslo kódu"
+              class="pop-input basket-price__input"
+            />
+            <button class="pop-button pop-button--neutral">Uplatnit kód</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="basket-actions">
+        <button class="pop-button pop-button--transparent">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.4143 13L17.7072 20.2929L16.2929 21.7071L7.58583 13L16.2929 4.29288L17.7072 5.70709L10.4143 13Z"
+            />
+          </svg>
+          Ještě si něco vyberu
+        </button>
+        <button class="pop-button pop-button--cyan">
+          Pokračovat<svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.5857 13L8.29285 5.70712L9.70706 4.29291L18.4142 13L9.70706 21.7071L8.29285 20.2929L15.5857 13Z"
+            />
+          </svg>
+        </button>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
   </body>

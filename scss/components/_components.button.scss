@@ -1,0 +1,78 @@
+@use "../mixins/mixins.index" as *;
+
+html.pop-redesign {
+  .pop-button {
+    @include flex-container;
+    gap: var(--pop-space-8);
+    @include pop-type-body-14-bold;
+    cursor: pointer;
+    fill: var(--pop-color-neutral-700);
+    min-height: 2.625rem;
+    padding-inline: var(--pop-space-24);
+    text-transform: uppercase;
+
+    // Sizes
+    &--large {
+      @include pop-type-body-16-bold;
+      min-height: 3.5rem;
+      padding-block: var(--pop-space-16);
+    }
+
+    // Variants
+    &--cyan {
+      background-color: var(--pop-color-cyan-500);
+      color: var(--pop-color-neutral-700);
+
+      &:hover {
+        background-color: var(--pop-color-cyan-400);
+      }
+
+      &:active:enabled {
+        background-color: var(--pop-color-cyan-500);
+      }
+
+      &:disabled {
+        background-color: var(--pop-color-cyan-300);
+        color: var(--pop-color-neutral-white);
+      }
+    }
+
+    &--neutral {
+      background-color: var(--pop-color-neutral-800);
+      color: var(--pop-color-neutral-white);
+
+      &:hover {
+        background-color: var(--pop-color-neutral-700);
+      }
+
+      &:active:enabled {
+        background-color: var(--pop-color-neutral-800);
+      }
+
+      &:disabled {
+        background-color: var(--pop-color-neutral-200);
+        color: var(--pop-color-neutral-400);
+      }
+    }
+
+    &--transparent {
+      background-color: transparent;
+      border: 1px solid var(--pop-color-neutral-400);
+      color: var(--pop-color-neutral-700);
+
+      &:hover {
+        border-color: var(--pop-color-neutral-700);
+      }
+
+      &:active:enabled {
+        background-color: var(--pop-color-neutral-50);
+        border-color: var(--pop-color-neutral-400);
+      }
+
+      &:disabled {
+        border-color: var(--pop-color-neutral-200);
+        color: var(--pop-color-neutral-400);
+      }
+    }
+  }
+}
