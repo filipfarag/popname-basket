@@ -10,6 +10,10 @@ html.pop-redesign {
     margin-block: var(--pop-space-48);
     max-width: 100%;
     width: var(--container-width);
+
+    @media (max-width: 800px) {
+      margin-block: var(--pop-space-24) var(--pop-space-36);
+    }
   }
 
   .step {
@@ -30,12 +34,14 @@ html.pop-redesign {
       @include pop-type-body-16-medium;
       color: var(--pop-color-neutral-400);
       margin-block: var(--pop-space-8) var(--pop-space-12);
+      text-align: center;
     }
 
     &__timeline {
       position: relative;
       background-color: var(--pop-color-neutral-300);
       height: 4px;
+      margin-top: auto;
       width: 100%;
 
       &::before {
@@ -48,6 +54,34 @@ html.pop-redesign {
         border-radius: 50%;
         height: 14px;
         width: 14px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      &__number {
+        @include pop-type-body-14-regular;
+        border: 1px solid var(--pop-color-neutral-500);
+        color: var(--pop-color-neutral-500);
+        height: 1.625rem;
+        margin-left: var(--pop-space-12);
+        width: 1.625rem;
+      }
+
+      &__label {
+        @include pop-type-body-14-regular;
+        color: var(--pop-color-neutral-500);
+        margin-block: var(--pop-space-4) var(--pop-space-12);
+        margin-left: var(--pop-space-12);
+      }
+
+      &__timeline {
+        height: 2px;
+
+        &::before {
+          border: 2px solid var(--pop-color-neutral-300);
+          height: 12px;
+          width: 12px;
+        }
       }
     }
   }
@@ -83,6 +117,25 @@ html.pop-redesign {
         border: 4px solid var(--pop-color-cyan-500);
       }
     }
+
+    @media (max-width: 800px) {
+      .step__number {
+        @include pop-type-body-14-medium;
+
+        &::after {
+          height: 1.125rem;
+          width: 1.125rem;
+        }
+      }
+
+      .step__label {
+        @include pop-type-body-14-medium;
+      }
+
+      .step__timeline::before {
+        border: 2px solid var(--pop-color-cyan-500);
+      }
+    }
   }
 
   .step--current {
@@ -105,6 +158,20 @@ html.pop-redesign {
         border: 4px solid var(--pop-color-cyan-500);
       }
     }
+
+    @media (max-width: 800px) {
+      .step__number {
+        @include pop-type-body-14-bold;
+      }
+
+      .step__label {
+        @include pop-type-body-14-bold;
+      }
+
+      .step__timeline::before {
+        border: 2px solid var(--pop-color-cyan-500);
+      }
+    }
   }
 
   .step-heading {
@@ -112,6 +179,11 @@ html.pop-redesign {
     color: var(--pop-color-neutral-800);
     margin-bottom: var(--pop-space-32);
     text-align: center;
+
+    @media (max-width: 800px) {
+      @include pop-type-h2;
+      margin-bottom: var(--pop-space-24);
+    }
   }
 
   .basket {
@@ -122,19 +194,29 @@ html.pop-redesign {
   }
 
   .basket-item {
-    @include flex-container($justify: space-between);
+    @include flex-container;
     background-color: var(--pop-color-neutral-white);
     padding: var(--pop-space-24);
     width: 100%;
 
-    &__product {
+    &__content {
       @include flex-container;
-      gap: var(--pop-space-24);
+      width: 100%;
     }
 
     &__image {
       height: 80px;
       width: 80px;
+    }
+
+    &__inner {
+      @include flex-container($justify: space-between);
+      margin-inline: var(--pop-space-24) auto;
+      width: 100%;
+
+      @media (max-width: 379px) {
+        margin-left: var(--pop-space-12);
+      }
     }
 
     &__label {
@@ -144,14 +226,10 @@ html.pop-redesign {
       width: 11rem;
     }
 
-    &__left {
-      @include flex-container;
-      gap: var(--pop-space-24);
-    }
-
-    &__middle {
+    &__selectors {
       @include flex-container;
       gap: var(--pop-space-48);
+      margin-inline: auto;
 
       .select-placeholder {
         @include flex-container($justify: space-between);
@@ -211,8 +289,9 @@ html.pop-redesign {
       }
     }
 
-    &__right {
+    &__price-container {
       @include flex-container;
+      flex-shrink: 0;
       gap: var(--pop-space-36);
     }
 
@@ -230,6 +309,50 @@ html.pop-redesign {
       &:hover {
         background-color: var(--pop-color-red-100);
         fill: var(--pop-color-red-500);
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      padding: var(--pop-space-12);
+
+      &__image {
+        height: 100px;
+        width: 100px;
+      }
+
+      &__label {
+        @include pop-type-body-16-bold;
+        width: initial;
+      }
+
+      &__inner {
+        flex-direction: column;
+        align-items: initial;
+        gap: var(--pop-space-16);
+        margin-left: var(--pop-space-16);
+      }
+
+      &__selectors {
+        gap: initial;
+        justify-content: space-between;
+        margin-inline: initial;
+      }
+
+      &__price-container {
+        justify-content: space-between;
+        margin-top: var(--pop-space-16);
+        width: 100%;
+      }
+
+      &__price {
+        @include pop-type-body-16-bold;
+        order: 1;
+      }
+
+      &__remove {
+        background-color: var(--pop-color-neutral-100);
+        fill: var(--pop-color-neutral-500);
       }
     }
   }
@@ -252,12 +375,12 @@ html.pop-redesign {
     &__label {
       @include pop-type-body-16-medium;
       color: var(--pop-color-neutral-800);
-      margin-right: auto;
     }
 
     &__amount {
       @include pop-type-body-16-bold;
       color: var(--pop-color-neutral-800);
+      margin-left: auto;
     }
 
     &__add-voucher {
@@ -278,11 +401,44 @@ html.pop-redesign {
       margin-inline: var(--pop-space-24) var(--pop-space-8);
       width: 16.25rem;
     }
+
+    @media (max-width: 800px) {
+      &__container {
+        padding: var(--pop-space-12);
+      }
+
+      &__container:not(:first-of-type) {
+        flex-direction: column;
+        gap: var(--pop-space-12);
+        align-items: initial;
+      }
+
+      &__add-voucher {
+        margin-block: var(--pop-space-8) var(--pop-space-8);
+      }
+
+      &__input {
+        margin-inline: initial;
+        width: 100%;
+      }
+    }
   }
 
   .basket-actions {
     @include flex-container($justify: space-between);
     margin-top: var(--pop-space-24);
+    max-width: 100%;
     width: var(--container-width);
+
+    @media (max-width: 800px) {
+      &__secondary-button.pop-button {
+        padding-inline: initial;
+        width: 2.625rem;
+      }
+
+      &__secondary-label {
+        display: none;
+      }
+    }
   }
 }

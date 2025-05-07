@@ -16,8 +16,8 @@
       Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
       zdarma kamkoliv v Česku.
     </section>
-    <header class="pop-header">
-      <a href="https://www.popname.cz">
+    <header class="pop-header pop-header--compact">
+      <a class="d-flex" href="https://www.popname.cz">
         <img src="assets/popname-logo.svg" alt="POPNAME logo"
       /></a>
       <div class="pop-header__links-container">
@@ -33,11 +33,11 @@
           <img src="assets/iconset/bag-medium.svg" alt="Ikona nákupní tašky" />
           <span class="pop-header__basket-items">3</span>
         </a>
-        <div class="u-position-relative">
+        <div class="pop-header__search-box">
           <input
             type="text"
             placeholder="Vyhledat zboží"
-            class="pop-header__search"
+            class="pop-header__search-field"
           />
           <img
             src="assets/iconset/search-small.svg"
@@ -48,7 +48,7 @@
       </div>
     </header>
 
-    <main class="d-flex fd-column ai-center">
+    <main class="d-flex fd-column ai-center u-mb-56 u-px-12">
       <section class="steps-container">
         <div class="step step--completed">
           <span class="step__number">1</span>
@@ -72,51 +72,61 @@
         </div>
       </section>
 
-      <p class="step-heading">Obsah tvého košíku</p>
+      <h1 class="step-heading">Obsah tvého košíku</h1>
 
       <section class="basket">
         <div class="basket-item">
-          <div class="basket-item__left">
+          <div class="basket-item__content">
             <img
               src="assets/placeholders/sneaker.png"
               class="basket-item__image"
             />
-            <span class="basket-item__label"
-              >Nike SB x Riot Dunk Low Pro QS Mahogany</span
-            >
-          </div>
-          <div class="basket-item__middle">
-            <div class="select-placeholder">
-              US 9<svg
-                width="17"
-                height="16"
-                viewBox="0 0 17 16"
-                class="select-placeholder__chevron"
+            <div class="basket-item__inner">
+              <span class="basket-item__label"
+                >Nike SB x Riot Dunk Low Pro QS Mahogany</span
               >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                />
-              </svg>
-            </div>
-            <div class="quantity-picker">
-              <button
-                class="quantity-picker__button quantity-picker__button--inactive"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                  <path d="M2.5 9V7h12v2z" />
-                </svg>
-              </button>
-              <span class="quantity-picker__amount">1</span>
-              <button class="quantity-picker__button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                  <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
-                </svg>
-              </button>
+              <div class="basket-item__selectors">
+                <div class="select-placeholder">
+                  US 9<svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    class="select-placeholder__chevron"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                    />
+                  </svg>
+                </div>
+                <div class="quantity-picker">
+                  <button
+                    class="quantity-picker__button quantity-picker__button--inactive"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                    >
+                      <path d="M2.5 9V7h12v2z" />
+                    </svg>
+                  </button>
+                  <span class="quantity-picker__amount">1</span>
+                  <button class="quantity-picker__button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                    >
+                      <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="basket-item__right">
+          <div class="basket-item__price-container">
             <span class="basket-item__price">3 299 Kč</span
             ><button class="basket-item__remove">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
@@ -133,47 +143,57 @@
         </div>
 
         <div class="basket-item">
-          <div class="basket-item__left">
+          <div class="basket-item__content">
             <img
               src="assets/placeholders/sneaker.png"
               class="basket-item__image"
             />
-            <span class="basket-item__label"
-              >Nike SB x Riot Dunk Low Pro QS Mahogany</span
-            >
-          </div>
-          <div class="basket-item__middle">
-            <div class="select-placeholder">
-              US 9<svg
-                width="17"
-                height="16"
-                viewBox="0 0 17 16"
-                class="select-placeholder__chevron"
+            <div class="basket-item__inner">
+              <span class="basket-item__label"
+                >Nike SB x Riot Dunk Low Pro QS Mahogany</span
               >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                />
-              </svg>
-            </div>
-            <div class="quantity-picker">
-              <button
-                class="quantity-picker__button quantity-picker__button--inactive"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                  <path d="M2.5 9V7h12v2z" />
-                </svg>
-              </button>
-              <span class="quantity-picker__amount">1</span>
-              <button class="quantity-picker__button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                  <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
-                </svg>
-              </button>
+              <div class="basket-item__selectors">
+                <div class="select-placeholder">
+                  US 9<svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    class="select-placeholder__chevron"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                    />
+                  </svg>
+                </div>
+                <div class="quantity-picker">
+                  <button
+                    class="quantity-picker__button quantity-picker__button--inactive"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                    >
+                      <path d="M2.5 9V7h12v2z" />
+                    </svg>
+                  </button>
+                  <span class="quantity-picker__amount">1</span>
+                  <button class="quantity-picker__button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                    >
+                      <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="basket-item__right">
+          <div class="basket-item__price-container">
             <span class="basket-item__price">3 299 Kč</span
             ><button class="basket-item__remove">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
@@ -212,7 +232,9 @@
       </section>
 
       <section class="basket-actions">
-        <button class="pop-button pop-button--transparent">
+        <button
+          class="pop-button pop-button--transparent basket-actions__secondary-button"
+        >
           <svg
             width="26"
             height="26"
@@ -225,10 +247,13 @@
               d="M10.4143 13L17.7072 20.2929L16.2929 21.7071L7.58583 13L16.2929 4.29288L17.7072 5.70709L10.4143 13Z"
             />
           </svg>
-          Ještě si něco vyberu
+          <span class="basket-actions__secondary-label"
+            >Ještě si něco vyberu</span
+          >
         </button>
         <button class="pop-button pop-button--cyan">
-          Pokračovat<svg
+          <span>Pokračovat</span
+          ><svg
             width="26"
             height="26"
             viewBox="0 0 26 26"
