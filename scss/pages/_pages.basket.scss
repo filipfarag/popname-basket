@@ -2,8 +2,6 @@
 
 // Wrapper class is used to avoid potential CSS clashes
 html.pop-redesign {
-  --container-width: 58.5rem;
-
   .steps-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -234,28 +232,6 @@ html.pop-redesign {
       gap: var(--pop-space-48);
       margin-inline: auto;
 
-      .select-placeholder {
-        @include flex-container($justify: space-between);
-        @include pop-type-body-14-medium;
-        border: 1px solid var(--pop-color-neutral-400);
-        color: var(--pop-color-neutral-700);
-        cursor: pointer;
-        height: 2.125rem;
-        padding-inline: var(--pop-space-12);
-        user-select: none;
-        width: 6.25rem;
-
-        &:hover {
-          .select-placeholder__chevron {
-            fill: var(--pop-color-neutral-800);
-          }
-        }
-
-        &__chevron {
-          fill: var(--pop-color-neutral-600);
-        }
-      }
-
       .quantity-picker {
         @include flex-container;
         gap: var(--pop-space-4);
@@ -367,7 +343,8 @@ html.pop-redesign {
 
     &__container {
       @include flex-container($justify: initial);
-      padding: var(--pop-space-16) var(--pop-space-24);
+      height: 4.625rem;
+      padding-inline: var(--pop-space-16);
       width: 100%;
 
       &:first-of-type {
@@ -386,7 +363,8 @@ html.pop-redesign {
       margin-left: auto;
     }
 
-    &__add-voucher {
+    &__add-voucher,
+    &__remove-voucher {
       @include flex-container;
       gap: var(--pop-space-8);
       @include pop-type-body-14-medium;
@@ -400,9 +378,18 @@ html.pop-redesign {
       }
     }
 
-    &__input {
+    &__remove-voucher {
+      display: none;
+    }
+
+    &__input.basket-price__input {
+      display: none;
       margin-inline: var(--pop-space-24) var(--pop-space-8);
       width: 16.25rem;
+    }
+
+    &__button.basket-price__button {
+      display: none;
     }
 
     @media (max-width: 800px) {
@@ -442,6 +429,32 @@ html.pop-redesign {
       &__secondary-label {
         display: none;
       }
+    }
+  }
+
+  .basket-form {
+    @include flex-container($direction: column, $align: initial);
+    gap: var(--pop-space-16);
+    background-color: var(--pop-color-neutral-white);
+    padding: var(--pop-space-24);
+    width: 100%;
+
+    &__heading {
+      @include pop-type-h4;
+      color: var(--pop-color-neutral-700);
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--pop-space-24);
+      row-gap: var(--pop-space-16);
+    }
+
+    &__city {
+      display: grid;
+      grid-template-columns: 1fr 5rem;
+      gap: var(--pop-space-24);
     }
   }
 }

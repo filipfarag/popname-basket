@@ -98,16 +98,16 @@
 }
 
 .fg-1 {
-  flex-grow: 1;
+  flex-grow: 1 !important;
 }
 
 /* Flex shrink */
 .fs-1 {
-  flex-shrink: 1; // Default flex value
+  flex-shrink: 1 !important; // Default flex value
 }
 
 .fs-0 {
-  flex-shrink: 0;
+  flex-shrink: 0 !important ;
 }
 
 /* Other useful classes */

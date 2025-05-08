@@ -67,12 +67,12 @@
 
     <main class="d-flex fd-column ai-center u-mb-56 u-px-12">
       <section class="steps-container">
-        <a href="index.html" class="step step--completed">
+        <a href="index.html" class="step step--current">
           <span class="step__number">1</span>
           <span class="step__label">Košík</span>
           <span class="step__timeline"></span>
         </a>
-        <a href="step-2.html" class="step step--current">
+        <a href="step-2.html" class="step">
           <span class="step__number">2</span>
           <span class="step__label">Dodací údaje</span>
           <span class="step__timeline"></span>
@@ -103,7 +103,7 @@
                 >Nike SB x Riot Dunk Low Pro QS Mahogany</span
               >
               <div class="basket-item__selectors">
-                <div class="select-placeholder">
+                <div class="select-placeholder select-placeholder--size">
                   US 9<svg
                     width="17"
                     height="16"
@@ -162,16 +162,16 @@
         <div class="basket-item">
           <div class="basket-item__content">
             <img
-              src="assets/placeholders/sneaker.png"
+              src="assets/placeholders/pants.png"
               class="basket-item__image"
             />
             <div class="basket-item__inner">
               <span class="basket-item__label"
-                >Nike SB x Riot Dunk Low Pro QS Mahogany</span
+                >Dime Classic Relaxed Denim Sand Indigo</span
               >
               <div class="basket-item__selectors">
-                <div class="select-placeholder">
-                  US 9<svg
+                <div class="select-placeholder select-placeholder--size">
+                  34<svg
                     width="17"
                     height="16"
                     viewBox="0 0 17 16"
@@ -211,7 +211,7 @@
             </div>
           </div>
           <div class="basket-item__price-container">
-            <span class="basket-item__price">3 299 Kč</span
+            <span class="basket-item__price">3 660 Kč</span
             ><button class="basket-item__remove">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
                 <path
@@ -229,21 +229,30 @@
         <div class="basket-price">
           <div class="basket-price__container">
             <span class="basket-price__label">Cena celkem</span>
-            <span class="basket-price__amount">9 814 Kč</span>
+            <span class="basket-price__amount">6 959 Kč</span>
           </div>
           <div class="basket-price__container">
             <button class="basket-price__add-voucher">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                 <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
               </svg>
+              Přidat slevový kód
+            </button>
+            <button class="basket-price__remove-voucher">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <path d="M2 9V7h12v2z" />
+              </svg>
               Odebrat slevový kód
             </button>
+
             <input
               type="text"
               placeholder="Zadej číslo kódu"
-              class="pop-input basket-price__input"
+              class="pop-input__field basket-price__input"
             />
-            <button class="pop-button pop-button--neutral">Uplatnit kód</button>
+            <button class="pop-button pop-button--neutral basket-price__button">
+              Uplatnit kód
+            </button>
           </div>
         </div>
       </section>

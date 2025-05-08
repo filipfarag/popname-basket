@@ -1,37 +1,15 @@
 :root {
-  // Border radius
-  --ts-border-radius-2: 0.125rem; // 2px
-  --ts-border-radius-4: 0.25rem; // 4px
-  --ts-border-radius-6: 0.375rem; // 6px
-  --ts-border-radius-8: 0.5rem; // 8px
-  --ts-border-radius-10: 0.625rem; // 10px
-  --ts-border-radius-16: 1rem; // 16px
-  --ts-border-radius-20: 1.25rem; // 20px
-
-  // Transition speed
-  --ts-transition-speed-100: 100ms;
-  --ts-transition-speed-150: 150ms;
-  --ts-transition-speed-200: 200ms;
-
-  // Transition vars
-  --ts-transition-base: var(--ts-transition-speed-150) ease-in-out;
-
-  --ts-transition-background: background-color var(--ts-transition-base);
-  --ts-transition-border: border-color var(--ts-transition-base);
-  --ts-transition-color: color var(--ts-transition-base);
-  --ts-transition-fill: fill var(--ts-transition-base);
-  --ts-transition-shadow: box-shadow var(--ts-transition-base);
-  --ts-transition-width: width var(--ts-transition-base);
+  --container-width: 58.5rem;
 
   // Z-index
-  --ts-z-index-level-1: 10;
-  --ts-z-index-level-2: 20;
-  --ts-z-index-level-3: 30;
-  --ts-z-index-level-4: 40;
-  --ts-z-index-level-5: 50;
-  --ts-z-index-level-6: 60;
-  --ts-z-index-level-7: 70;
-  --ts-z-index-level-8: 80;
-  --ts-z-index-level-9: 90;
-  --ts-z-index-level-10: 100;
+  --pop-z-index-level-1: 10;
+  --pop-z-index-level-2: 20;
+  --pop-z-index-level-3: 30;
+  --pop-z-index-level-4: 40;
+  --pop-z-index-level-5: 50;
+  --pop-z-index-level-6: 60;
+  --pop-z-index-level-7: 70;
+  --pop-z-index-level-8: 80;
+  --pop-z-index-level-9: 90;
+  --pop-z-index-level-10: 100;
 }

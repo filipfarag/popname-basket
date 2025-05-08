@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="pop-redesign">
+  <head>
+    <link rel="stylesheet" href="css-compiled/styles.css" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>POPNAME Basket</title>
+  </head>
+
+  <body>
+    <section class="pop-banner">
+      Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
+      zdarma kamkoliv v Česku.
+    </section>
+    <header class="pop-header">
+      <div class="pop-header__inner">
+        <a href="" class="pop-header__burger-wrapper">
+          <div class="pop-header__burger">
+            <span
+              class="pop-header__burger-line pop-header__burger-line--1"
+            ></span
+            ><span
+              class="pop-header__burger-line pop-header__burger-line--2"
+            ></span
+            ><span
+              class="pop-header__burger-line pop-header__burger-line--3"
+            ></span></div
+        ></a>
+        <a class="d-flex" href="">
+          <img src="assets/popname-logo.svg" alt="POPNAME logo"
+        /></a>
+      </div>
+      <div class="pop-header__links-container">
+        <a href="" class="pop-header__link">NOVINKY</a>
+        <a href="" class="pop-header__link">BOTY</a>
+        <a href="" class="pop-header__link">OBLEČENÍ</a>
+        <a href="" class="pop-header__link">ZNAČKY</a>
+        <a href="" class="pop-header__link">KATEGORIE</a>
+        <a href="" class="pop-header__link">SLEVY</a>
+      </div>
+      <a href="" class="pop-header__basket">
+        <img src="assets/iconset/bag-medium.svg" alt="Ikona nákupní tašky" />
+        <span class="pop-header__basket-items">3</span>
+      </a>
+      <div class="pop-header__search-box">
+        <input
+          type="text"
+          placeholder="Vyhledat zboží"
+          class="pop-header__search-field"
+        />
+        <img
+          src="assets/iconset/search-small.svg"
+          alt="Ikona vyhledávání"
+          class="pop-header__search-small"
+        />
+        <img
+          src="assets/iconset/search-medium.svg"
+          alt="Ikona vyhledávání"
+          class="pop-header__search-medium"
+        />
+      </div>
+    </header>
+
+    <main class="d-flex fd-column ai-center u-mb-56 u-px-12">
+      <section class="steps-container">
+        <a href="index.html" class="step step--completed">
+          <span class="step__number">1</span>
+          <span class="step__label">Košík</span>
+          <span class="step__timeline"></span>
+        </a>
+        <a href="step-2.html" class="step step--current">
+          <span class="step__number">2</span>
+          <span class="step__label">Dodací údaje</span>
+          <span class="step__timeline"></span>
+        </a>
+        <a href="step-3.html" class="step">
+          <span class="step__number">3</span>
+          <span class="step__label">Doprava a platba</span>
+          <span class="step__timeline"></span>
+        </a>
+        <a href="step-4.html" class="step">
+          <span class="step__number">4</span>
+          <span class="step__label">Shrnutí</span>
+          <span class="step__timeline"></span>
+        </a>
+      </section>
+
+      <h1 class="step-heading">Dodací údaje</h1>
+
+      <section class="basket">
+        <div class="basket-form">
+          <h4 class="basket-form__heading">Adresa a kontakt</h4>
+          <div class="basket-form__inner">
+            <div class="pop-input">
+              <span class="pop-input__label">Jméno</span>
+              <input type="text" id="name" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Příjmení</span>
+              <input type="text" id="surname" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label"
+                >Firma (pro doručení do práce)</span
+              >
+              <input type="text" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Ulice a číslo domu</span>
+              <input type="text" id="address" class="pop-input__field" />
+            </div>
+            <div class="basket-form__city">
+              <div class="pop-input">
+                <span class="pop-input__label">Město</span>
+                <input type="text" class="pop-input__field" />
+              </div>
+              <div class="pop-input">
+                <span class="pop-input__label">PSČ</span>
+                <input type="number" class="pop-input__field" />
+              </div>
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Země</span>
+              <div class="select-placeholder">
+                Česko<svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  class="select-placeholder__chevron"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">E-mail</span>
+              <input type="text" id="email" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Telefonní číslo</span>
+              <div class="d-flex">
+                <div class="select-placeholder select-placeholder--phone">
+                  +420<svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    class="select-placeholder__chevron"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                    />
+                  </svg>
+                </div>
+                <input type="text" id="phone" class="pop-input__field fg-1" />
+              </div>
+            </div>
+          </div>
+          <div class="pop-textarea">
+            <span class="pop-textarea__label">Poznámka</span>
+            <textarea type="text" class="pop-textarea__field"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="basket-actions">
+        <a
+          href="/index.html"
+          class="pop-button pop-button--transparent basket-actions__secondary-button"
+        >
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.4143 13L17.7072 20.2929L16.2929 21.7071L7.58583 13L16.2929 4.29288L17.7072 5.70709L10.4143 13Z"
+            />
+          </svg>
+          <span class="basket-actions__secondary-label">Zpět</span>
+        </a>
+        <a href="step-2.html" class="pop-button pop-button--cyan">
+          <span>Pokračovat</span
+          ><svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.5857 13L8.29285 5.70712L9.70706 4.29291L18.4142 13L9.70706 21.7071L8.29285 20.2929L15.5857 13Z"
+            />
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
