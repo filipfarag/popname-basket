@@ -20,6 +20,7 @@ html.pop-redesign {
   .pop-input__label {
     @include pop-type-body-12-medium;
     color: var(--pop-color-neutral-500);
+    user-select: none;
   }
 
   .pop-input__field {
@@ -38,6 +39,21 @@ html.pop-redesign {
 
     &::placeholder {
       color: var(--pop-color-neutral-500);
+    }
+  }
+
+  .pop-input__state {
+    @include pop-type-body-12-medium;
+  }
+
+  // Error state
+  .pop-input--error {
+    .pop-input__field {
+      border-color: var(--pop-color-red-500);
+    }
+
+    .pop-input__state {
+      color: var(--pop-color-red-500);
     }
   }
 }

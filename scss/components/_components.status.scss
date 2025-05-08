@@ -1,0 +1,36 @@
+@use "../mixins/mixins.index" as *;
+
+html.pop-redesign {
+  .pop-status {
+    @include pop-type-body-14-medium;
+    background-color: var(--pop-color-neutral-100);
+    border: 1px solid var(--pop-color-neutral-400);
+    color: var(--pop-color-neutral-700);
+    padding: var(--pop-space-12) var(--pop-space-16);
+
+    // Sizes
+    &--small {
+      @include pop-type-body-12-medium;
+      padding: var(--pop-space-8) var(--pop-space-12);
+    }
+
+    // Variants
+    &--blue {
+      background-color: var(--pop-color-blue-100);
+      border: 1px solid var(--pop-color-blue-400);
+      color: var(--pop-color-blue-700);
+    }
+
+    &--green {
+      background-color: var(--pop-color-green-100);
+      border: 1px solid var(--pop-color-green-400);
+      color: var(--pop-color-neutral-700);
+    }
+
+    &--red {
+      background-color: var(--pop-color-red-100);
+      border: 1px solid var(--pop-color-red-400);
+      color: var(--pop-color-red-700);
+    }
+  }
+}

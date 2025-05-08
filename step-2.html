@@ -140,9 +140,12 @@
                 </svg>
               </div>
             </div>
-            <div class="pop-input">
+            <div class="pop-input pop-input--error">
               <span class="pop-input__label">E-mail</span>
               <input type="text" id="email" class="pop-input__field" />
+              <span class="pop-input__state"
+                >Prosím zadejte správnou e-mailovou adresu</span
+              >
             </div>
             <div class="pop-input">
               <span class="pop-input__label">Telefonní číslo</span>
@@ -168,6 +171,126 @@
           <div class="pop-textarea">
             <span class="pop-textarea__label">Poznámka</span>
             <textarea type="text" class="pop-textarea__field"></textarea>
+          </div>
+
+          <button class="pop-basket__add">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+              <path d="M9.5 2h-2v5h-5v2h5v5h2V9h5V7h-5V2z" />
+            </svg>
+            Doplnit fakturační údaje
+          </button>
+          <button class="pop-basket__remove">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+              <path d="M2 9V7h12v2z" />
+            </svg>
+            Odebrat fakturační údaje
+          </button>
+          <h4 class="basket-form__heading basket-form__billing">
+            Fakturační údaje
+          </h4>
+          <div class="basket-form__inner basket-form__billing">
+            <div class="pop-input">
+              <span class="pop-input__label">Jméno</span>
+              <input type="text" id="name" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Příjmení</span>
+              <input type="text" id="surname" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Firma</span>
+              <input type="text" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Ulice a číslo domu</span>
+              <input type="text" id="address" class="pop-input__field" />
+            </div>
+            <div class="basket-form__city">
+              <div class="pop-input">
+                <span class="pop-input__label">Město</span>
+                <input type="text" class="pop-input__field" />
+              </div>
+              <div class="pop-input">
+                <span class="pop-input__label">PSČ</span>
+                <input type="number" class="pop-input__field" />
+              </div>
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Země</span>
+              <div class="select-placeholder">
+                Česko<svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  class="select-placeholder__chevron"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">IČ</span>
+              <input type="text" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">DIČ</span>
+              <input type="text" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">E-mail</span>
+              <input type="text" id="email" class="pop-input__field" />
+            </div>
+            <div class="pop-input">
+              <span class="pop-input__label">Telefonní číslo</span>
+              <div class="d-flex">
+                <div class="select-placeholder select-placeholder--phone">
+                  +420<svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    class="select-placeholder__chevron"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
+                    />
+                  </svg>
+                </div>
+                <input type="text" id="phone" class="pop-input__field fg-1" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex fd-column gap-12 u-mt-16">
+            <div class="pop-checkbox">
+              <input
+                class="pop-checkbox__input"
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+              />
+              <label
+                class="pop-checkbox__label"
+                for="newsletter"
+                name="newsletter"
+                >Přeji si zasílat novinky a promo akce od Popname</label
+              >
+            </div>
+            <div class="pop-checkbox">
+              <input
+                class="pop-checkbox__input"
+                type="checkbox"
+                id="terms"
+                name="terms"
+              />
+              <label class="pop-checkbox__label" for="terms" name="terms"
+                >Souhlasím s obchodními podmínkami</label
+              >
+            </div>
           </div>
         </div>
       </section>

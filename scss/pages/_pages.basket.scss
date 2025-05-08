@@ -7,8 +7,32 @@ html.pop-redesign {
     margin-bottom: var(--pop-space-56);
     padding-inline: var(--pop-space-12);
 
+    &__add,
+    &__remove {
+      @include flex-container($justify: initial);
+      gap: var(--pop-space-8);
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-600);
+      cursor: pointer;
+      fill: var(--pop-color-neutral-600);
+
+      &:hover {
+        color: var(--pop-color-neutral-800);
+        fill: var(--pop-color-neutral-800);
+      }
+    }
+
+    &__remove {
+      display: none;
+    }
+
     @media (max-width: 800px) {
       margin-bottom: var(--pop-space-88);
+
+      &__add,
+      &__remove {
+        margin-block: var(--pop-space-8);
+      }
     }
   }
 
@@ -373,25 +397,6 @@ html.pop-redesign {
       margin-left: auto;
     }
 
-    &__add-voucher,
-    &__remove-voucher {
-      @include flex-container;
-      gap: var(--pop-space-8);
-      @include pop-type-body-14-medium;
-      color: var(--pop-color-neutral-600);
-      cursor: pointer;
-      fill: var(--pop-color-neutral-600);
-
-      &:hover {
-        color: var(--pop-color-neutral-800);
-        fill: var(--pop-color-neutral-800);
-      }
-    }
-
-    &__remove-voucher {
-      display: none;
-    }
-
     &__input.basket-price__input {
       display: none;
       margin-inline: var(--pop-space-24) var(--pop-space-8);
@@ -411,10 +416,6 @@ html.pop-redesign {
         flex-direction: column;
         gap: var(--pop-space-12);
         align-items: initial;
-      }
-
-      &__add-voucher {
-        margin-block: var(--pop-space-8) var(--pop-space-8);
       }
 
       &__input {
@@ -471,6 +472,18 @@ html.pop-redesign {
       display: grid;
       grid-template-columns: 1fr 5rem;
       gap: var(--pop-space-24);
+    }
+
+    &__billing {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      width: 100dvw;
+
+      &__inner {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
