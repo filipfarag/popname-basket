@@ -2,6 +2,16 @@
 
 // Wrapper class is used to avoid potential CSS clashes
 html.pop-redesign {
+  .pop-basket {
+    @include flex-container($direction: column, $justify: initial);
+    margin-bottom: var(--pop-space-56);
+    padding-inline: var(--pop-space-12);
+
+    @media (max-width: 800px) {
+      margin-bottom: var(--pop-space-88);
+    }
+  }
+
   .steps-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -10,7 +20,7 @@ html.pop-redesign {
     width: var(--container-width);
 
     @media (max-width: 800px) {
-      margin-block: var(--pop-space-24) var(--pop-space-36);
+      margin-block: var(--pop-space-24) var(--pop-space-40);
     }
   }
 
@@ -421,6 +431,12 @@ html.pop-redesign {
     width: var(--container-width);
 
     @media (max-width: 800px) {
+      position: fixed;
+      bottom: 0;
+      background: var(--pop-color-neutral-white);
+      border-top: 1px solid var(--pop-color-neutral-300);
+      padding: var(--pop-space-12) var(--pop-space-16);
+
       &__secondary-button.pop-button {
         padding-inline: initial;
         width: 2.625rem;
