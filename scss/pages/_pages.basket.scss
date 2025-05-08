@@ -486,4 +486,120 @@ html.pop-redesign {
       }
     }
   }
+
+  .basket-summary-item {
+    @include flex-container;
+    gap: var(--pop-space-24);
+    background-color: var(--pop-color-neutral-white);
+    max-width: 100%;
+    padding: var(--pop-space-24);
+    width: var(--container-width);
+
+    &__image {
+      height: 80px;
+      width: 80px;
+    }
+
+    &__inner {
+      @include flex-container($justify: space-between);
+      width: 100%;
+    }
+
+    &__label {
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__price {
+      @include pop-type-body-14-bold;
+      color: var(--pop-color-neutral-800);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 800px) {
+      gap: var(--pop-space-16);
+      padding: var(--pop-space-12);
+
+      &__image {
+        height: 100px;
+        width: 100px;
+      }
+
+      &__inner {
+        flex-direction: column;
+        gap: var(--pop-space-16);
+      }
+
+      &__label {
+        align-self: flex-start;
+      }
+
+      &__price {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .basket-summary-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--pop-space-8);
+    width: 100%;
+
+    &__inner {
+      background-color: var(--pop-color-neutral-white);
+      padding: var(--pop-space-24);
+    }
+
+    &__label {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-700);
+      margin-bottom: 0.125rem;
+      white-space: nowrap;
+    }
+
+    &__sublabel {
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-600);
+    }
+
+    &__price {
+      @include pop-type-body-14-bold;
+      color: var(--pop-color-neutral-700);
+      white-space: nowrap;
+    }
+
+    &__separator {
+      display: flex;
+      background-color: var(--pop-color-neutral-200);
+      height: 1px;
+      margin-block: var(--pop-space-16);
+      width: 100%;
+    }
+
+    &__contact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+
+    &__total-label {
+      @include pop-type-body-16-medium;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__total-price {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-800);
+    }
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+
+      &__contact {
+        grid-template-columns: 1fr;
+        gap: var(--pop-space-16);
+      }
+    }
+  }
 }
