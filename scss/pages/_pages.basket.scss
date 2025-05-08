@@ -18,6 +18,7 @@ html.pop-redesign {
 
   .step {
     @include flex-container($direction: column);
+    pointer-events: none;
 
     &__number {
       @include flex-container;
@@ -87,6 +88,8 @@ html.pop-redesign {
   }
 
   .step--completed {
+    pointer-events: initial;
+
     .step__number {
       position: relative;
       background-color: var(--pop-color-neutral-600);

@@ -16,10 +16,24 @@
       Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
       zdarma kamkoliv v Česku.
     </section>
-    <header class="pop-header pop-header--compact">
-      <a class="d-flex" href="https://www.popname.cz">
-        <img src="assets/popname-logo.svg" alt="POPNAME logo"
-      /></a>
+    <header class="pop-header">
+      <div class="pop-header__inner">
+        <a href="" class="pop-header__burger-wrapper">
+          <div class="pop-header__burger">
+            <span
+              class="pop-header__burger-line pop-header__burger-line--1"
+            ></span
+            ><span
+              class="pop-header__burger-line pop-header__burger-line--2"
+            ></span
+            ><span
+              class="pop-header__burger-line pop-header__burger-line--3"
+            ></span></div
+        ></a>
+        <a class="d-flex" href="">
+          <img src="assets/popname-logo.svg" alt="POPNAME logo"
+        /></a>
+      </div>
       <div class="pop-header__links-container">
         <a href="" class="pop-header__link">NOVINKY</a>
         <a href="" class="pop-header__link">BOTY</a>
@@ -28,48 +42,51 @@
         <a href="" class="pop-header__link">KATEGORIE</a>
         <a href="" class="pop-header__link">SLEVY</a>
       </div>
-      <div class="d-flex gap-24">
-        <a href="" class="pop-header__basket">
-          <img src="assets/iconset/bag-medium.svg" alt="Ikona nákupní tašky" />
-          <span class="pop-header__basket-items">3</span>
-        </a>
-        <div class="pop-header__search-box">
-          <input
-            type="text"
-            placeholder="Vyhledat zboží"
-            class="pop-header__search-field"
-          />
-          <img
-            src="assets/iconset/search-small.svg"
-            alt="Ikona vyhledávání"
-            class="pop-header__search-icon"
-          />
-        </div>
+      <a href="" class="pop-header__basket">
+        <img src="assets/iconset/bag-medium.svg" alt="Ikona nákupní tašky" />
+        <span class="pop-header__basket-items">3</span>
+      </a>
+      <div class="pop-header__search-box">
+        <input
+          type="text"
+          placeholder="Vyhledat zboží"
+          class="pop-header__search-field"
+        />
+        <img
+          src="assets/iconset/search-small.svg"
+          alt="Ikona vyhledávání"
+          class="pop-header__search-small"
+        />
+        <img
+          src="assets/iconset/search-medium.svg"
+          alt="Ikona vyhledávání"
+          class="pop-header__search-medium"
+        />
       </div>
     </header>
 
     <main class="d-flex fd-column ai-center u-mb-56 u-px-12">
       <section class="steps-container">
-        <div class="step step--completed">
+        <a href="index.html" class="step step--completed">
           <span class="step__number">1</span>
           <span class="step__label">Košík</span>
           <span class="step__timeline"></span>
-        </div>
-        <div class="step step--current">
+        </a>
+        <a href="step-2.html" class="step step--current">
           <span class="step__number">2</span>
           <span class="step__label">Dodací údaje</span>
           <span class="step__timeline"></span>
-        </div>
-        <div class="step">
+        </a>
+        <a href="step-3.html" class="step">
           <span class="step__number">3</span>
           <span class="step__label">Doprava a platba</span>
           <span class="step__timeline"></span>
-        </div>
-        <div class="step">
+        </a>
+        <a href="step-4.html" class="step">
           <span class="step__number">4</span>
           <span class="step__label">Shrnutí</span>
           <span class="step__timeline"></span>
-        </div>
+        </a>
       </section>
 
       <h1 class="step-heading">Obsah tvého košíku</h1>
@@ -232,7 +249,8 @@
       </section>
 
       <section class="basket-actions">
-        <button
+        <a
+          href=""
           class="pop-button pop-button--transparent basket-actions__secondary-button"
         >
           <svg
@@ -250,8 +268,8 @@
           <span class="basket-actions__secondary-label"
             >Ještě si něco vyberu</span
           >
-        </button>
-        <button class="pop-button pop-button--cyan">
+        </a>
+        <a href="step-2.html" class="pop-button pop-button--cyan">
           <span>Pokračovat</span
           ><svg
             width="26"
@@ -265,7 +283,7 @@
               d="M15.5857 13L8.29285 5.70712L9.70706 4.29291L18.4142 13L9.70706 21.7071L8.29285 20.2929L15.5857 13Z"
             />
           </svg>
-        </button>
+        </a>
       </section>
     </main>
 
