@@ -12,11 +12,18 @@ html.pop-redesign {
     text-align: center;
     text-transform: uppercase;
 
+    &--with-icon-left {
+      padding-inline: var(--pop-space-16) var(--pop-space-24);
+    }
+
+    &--with-icon-right {
+      padding-inline: var(--pop-space-24) var(--pop-space-16);
+    }
+
     // Sizes
     &--large {
       @include pop-type-body-16-bold;
       min-height: 3.5rem;
-      padding-block: var(--pop-space-16);
     }
 
     // Variants

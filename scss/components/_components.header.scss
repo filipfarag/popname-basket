@@ -19,16 +19,22 @@ html.pop-redesign {
 
     &__inner {
       @include flex-container;
-      gap: var(--pop-space-36);
+      gap: var(--pop-space-32);
     }
 
     &__burger {
       position: relative;
       height: 12px;
       width: 18px;
+    }
 
-      &:hover .pop-header__burger-line {
-        background-color: var(--pop-color-cyan-500);
+    &__burger-wrapper {
+      @include flex-container;
+      height: 34px;
+      width: 34px;
+
+      &:hover {
+        background-color: var(--pop-color-neutral-700);
       }
     }
 
@@ -166,7 +172,6 @@ html.pop-redesign {
       }
 
       &__burger-wrapper {
-        @include flex-container;
         background-color: var(--pop-color-neutral-700);
         height: 42px;
         width: 42px;

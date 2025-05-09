@@ -444,11 +444,16 @@ html.pop-redesign {
       bottom: 0;
       background: var(--pop-color-neutral-white);
       border-top: 1px solid var(--pop-color-neutral-300);
-      padding: var(--pop-space-12) var(--pop-space-16);
+      padding: var(--pop-space-16) var(--pop-space-12);
 
       &__secondary-button.pop-button {
         padding-inline: initial;
-        width: 2.625rem;
+        width: 3.5rem;
+      }
+
+      &__button.pop-button {
+        @include pop-type-body-16-bold;
+        min-height: 3.5rem;
       }
 
       &__secondary-label {
