@@ -1,0 +1,91 @@
+@use "../mixins/mixins.index" as *;
+
+html.pop-redesign {
+  .pop-radio {
+    @include flex-container($justify: initial);
+    cursor: pointer;
+    user-select: none;
+
+    &__label {
+      @include flex-container($justify: initial);
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-500);
+      cursor: pointer;
+      padding-left: var(--pop-space-16);
+    }
+  }
+
+  // Radio label when radio is checked
+  .pop-radio:has(.pop-radio__input:checked:not(:disabled)) .pop-radio__label {
+    color: var(--pop-color-neutral-700);
+  }
+
+  // Radio label when radio is checked and disabled
+  .pop-radio:has(.pop-radio__input:checked:disabled) .pop-radio__label {
+    color: var(--pop-color-neutral-300);
+  }
+
+  // Disabled state
+  .pop-radio:has(.pop-radio__input:disabled) {
+    cursor: default;
+
+    .pop-radio__input {
+      border-color: var(--pop-color-neutral-300);
+    }
+
+    .pop-radio__label {
+      color: var(--pop-color-neutral-300);
+    }
+  }
+
+  // Radio circle
+  .pop-radio__input {
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: 2px solid var(--pop-color-neutral-400);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.375rem;
+    margin: 0;
+    width: 1.375rem;
+
+    // Radio circle reset
+    appearance: none;
+    -webkit-appearance: none;
+
+    // Checked input state
+    &:checked {
+      background-color: var(--pop-color-neutral-700);
+      border-color: var(--pop-color-neutral-700);
+
+      &::before {
+        transform: scale(1);
+        transition: box-shadow 150ms ease-in-out,
+          transform 150ms cubic-bezier(0.15, 0.65, 0.3, 1.4);
+      }
+    }
+
+    // Checked and disabled state
+    &:disabled:checked::before {
+      box-shadow: inset 1rem 1rem var(--foxy-color-neutral-tint-light-3);
+      transform: scale(1);
+    }
+
+    // Inner circle styles (when radio is checked)
+    &::before {
+      content: "";
+      border-radius: 50%;
+      box-shadow: inset 1rem 1rem var(--pop-color-neutral-white);
+      height: 0.5rem;
+      width: 0.5rem;
+      transform: scale(0);
+    }
+  }
+
+  // Hover styles
+  .pop-radio__input:hover:not(:disabled):not(:checked) {
+    border-color: var(--pop-color-neutral-600);
+  }
+}

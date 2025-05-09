@@ -26,6 +26,14 @@ html.pop-redesign {
       display: none;
     }
 
+    &__separator {
+      display: flex;
+      background-color: var(--pop-color-neutral-200);
+      height: 1px;
+      margin-block: var(--pop-space-16);
+      width: 100%;
+    }
+
     @media (max-width: 800px) {
       margin-bottom: var(--pop-space-88);
 
@@ -569,14 +577,6 @@ html.pop-redesign {
       white-space: nowrap;
     }
 
-    &__separator {
-      display: flex;
-      background-color: var(--pop-color-neutral-200);
-      height: 1px;
-      margin-block: var(--pop-space-16);
-      width: 100%;
-    }
-
     &__contact {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -599,6 +599,69 @@ html.pop-redesign {
       &__contact {
         grid-template-columns: 1fr;
         gap: var(--pop-space-16);
+      }
+    }
+  }
+
+  .fulfillment {
+    max-width: 100%;
+    width: var(--container-width);
+
+    &__heading {
+      @include pop-type-h3;
+      color: var(--pop-color-neutral-800);
+      margin-bottom: var(--pop-space-16);
+
+      &:not(:first-of-type) {
+        margin-top: var(--pop-space-32);
+      }
+    }
+
+    &__subheading {
+      @include pop-type-h4;
+      color: var(--pop-color-neutral-700);
+    }
+
+    &__container {
+      background-color: var(--pop-color-neutral-white);
+      padding-inline: var(--pop-space-24);
+    }
+
+    &__delivery-logo {
+      padding-inline: var(--pop-space-8) var(--pop-space-12);
+    }
+
+    &__price {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-800);
+      margin-left: auto;
+      padding-left: var(--pop-space-8);
+      white-space: nowrap;
+    }
+
+    &__option-labels {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+    }
+
+    &__option-label {
+      @include pop-type-body-16-bold;
+      color: var(--pop-color-neutral-700);
+    }
+
+    &__option-sublabel {
+      @include pop-type-body-14-medium;
+      color: var(--pop-color-neutral-600);
+    }
+
+    @media (max-width: 800px) {
+      &__container {
+        padding-inline: var(--pop-space-12);
+      }
+
+      &__delivery-logo {
+        padding-left: 0;
       }
     }
   }
