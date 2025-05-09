@@ -722,7 +722,6 @@ html.pop-redesign {
     &--visible {
       position: fixed;
       inset: 0;
-      top: var(--pop-header-height);
       @include flex-container($direction: column);
       background: var(--pop-color-neutral-white);
       padding-inline: var(--pop-space-12);
@@ -739,7 +738,8 @@ html.pop-redesign {
     }
   }
 
-  &:has(.balikovna-iframe--visible) .pop-banner {
+  &:has(.balikovna-iframe--visible) .pop-banner,
+  &:has(.balikovna-iframe--visible) .pop-header {
     display: none;
   }
 }
