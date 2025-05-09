@@ -26,6 +26,7 @@ html.pop-redesign {
   .pop-input__field {
     @include flex-container($justify: initial);
     @include pop-type-body-14-medium;
+    border-radius: 0;
     color: var(--pop-color-neutral-700);
     border: 1px solid var(--pop-color-neutral-400);
     height: 2.625rem;
@@ -39,6 +40,10 @@ html.pop-redesign {
 
     &::placeholder {
       color: var(--pop-color-neutral-500);
+    }
+
+    &:-webkit-autofill {
+      transition: background-color 999s 0s, color 999s 0s;
     }
   }
 

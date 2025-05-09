@@ -4,11 +4,13 @@ html.pop-redesign {
   .pop-header {
     --search-padding: var(--pop-space-12);
 
-    position: relative;
+    position: sticky;
+    top: 0;
     @include flex-container($justify: space-between);
     background-color: var(--pop-color-neutral-800);
     height: 3.75rem;
     padding-inline: var(--pop-space-48);
+    z-index: 10;
 
     @include responsive(mobile) {
       height: 4.5rem;
@@ -143,6 +145,8 @@ html.pop-redesign {
     }
 
     &--compact {
+      position: relative;
+
       .pop-header__links-container,
       .pop-header__search-box {
         display: none;

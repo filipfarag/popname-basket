@@ -385,7 +385,7 @@ html.pop-redesign {
 
     &__container {
       @include flex-container($justify: initial);
-      height: 4.625rem;
+      min-height: 4.625rem;
       padding-inline: var(--pop-space-16);
       width: 100%;
 
@@ -426,7 +426,7 @@ html.pop-redesign {
         align-items: initial;
       }
 
-      &__input {
+      &__input.basket-price__input {
         margin-inline: initial;
         width: 100%;
       }
