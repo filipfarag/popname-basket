@@ -22,3 +22,11 @@ removeItem.addEventListener("click", function () {
   voucherInputs.forEach((input) => (input.style.display = ""));
   voucherButtons.forEach((button) => (button.style.display = ""));
 });
+
+const burgerWrapper = document.querySelector(".pop-header__burger-wrapper");
+
+if (burgerWrapper) {
+  burgerWrapper.addEventListener("click", function () {
+    this.classList.toggle("pop-header__burger-wrapper--open");
+  });
+}

@@ -32,7 +32,7 @@ html.pop-redesign {
       }
     }
 
-    &__burger--open {
+    &__burger-wrapper--open {
       .pop-header__burger-line--1 {
         top: 5px;
         rotate: 45deg;
@@ -121,6 +121,7 @@ html.pop-redesign {
       color: var(--pop-color-neutral-800);
       background-color: var(--pop-color-neutral-white);
       border: none;
+      border-radius: 0;
       @include pop-type-body-14-medium;
       height: 2rem; // 32px
       outline: none;

@@ -17,6 +17,7 @@ html.pop-redesign {
     @include pop-type-body-14-medium;
     color: var(--pop-color-neutral-700);
     border: 1px solid var(--pop-color-neutral-400);
+    border-radius: 0;
     min-height: 6.25rem;
     padding: var(--pop-space-12);
     resize: vertical;
