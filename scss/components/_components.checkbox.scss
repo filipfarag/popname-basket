@@ -62,6 +62,10 @@ html.pop-redesign {
       color: var(--pop-color-neutral-500);
       cursor: pointer;
       padding-left: var(--pop-space-16);
+
+      @include responsive(mobile) {
+        padding-left: var(--pop-space-12);
+      }
     }
   }
 }
