@@ -598,12 +598,24 @@ html.pop-redesign {
       color: var(--pop-color-neutral-800);
     }
 
+    &__separator {
+      display: none;
+    }
+
     @media (max-width: 800px) {
       grid-template-columns: 1fr;
 
       &__contact {
         grid-template-columns: 1fr;
-        gap: var(--pop-space-16);
+        gap: 0;
+      }
+
+      &__separator {
+        display: flex;
+      }
+
+      .pop-basket__separator:last-child {
+        display: none;
       }
     }
   }

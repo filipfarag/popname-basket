@@ -5,28 +5,33 @@ const voucherInputs = document.querySelectorAll(".basket-price__input");
 const voucherButtons = document.querySelectorAll(".basket-price__button");
 const basketForms = document.querySelectorAll(".basket-form__billing");
 
-addItem.addEventListener("click", function () {
-  addItem.style.display = "none";
-  removeItem.style.display = "flex";
+if (addItem && removeItem) {
+  addItem.addEventListener("click", function () {
+    addItem.style.display = "none";
+    removeItem.style.display = "flex";
 
-  basketForms.forEach((form) => (form.style.display = "grid"));
-  voucherInputs.forEach((input) => (input.style.display = "initial"));
-  voucherButtons.forEach((button) => (button.style.display = "initial"));
-});
+    basketForms.forEach((form) => (form.style.display = "grid"));
+    voucherInputs.forEach((input) => (input.style.display = "initial"));
+    voucherButtons.forEach((button) => (button.style.display = "initial"));
+  });
 
-removeItem.addEventListener("click", function () {
-  addItem.style.display = "flex";
-  removeItem.style.display = "none";
+  removeItem.addEventListener("click", function () {
+    addItem.style.display = "flex";
+    removeItem.style.display = "none";
 
-  basketForms.forEach((form) => (form.style.display = "none"));
-  voucherInputs.forEach((input) => (input.style.display = ""));
-  voucherButtons.forEach((button) => (button.style.display = ""));
-});
-
-const burgerWrapper = document.querySelector(".pop-header__burger-wrapper");
-
-if (burgerWrapper) {
-  burgerWrapper.addEventListener("click", function () {
-    this.classList.toggle("pop-header__burger-wrapper--open");
+    basketForms.forEach((form) => (form.style.display = "none"));
+    voucherInputs.forEach((input) => (input.style.display = ""));
+    voucherButtons.forEach((button) => (button.style.display = ""));
   });
 }
+
+// Burger menu
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerWrapper = document.querySelector(".pop-header__burger-wrapper");
+
+  if (burgerWrapper) {
+    burgerWrapper.addEventListener("click", function () {
+      this.classList.toggle("pop-header__burger-wrapper--open");
+    });
+  }
+});
