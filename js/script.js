@@ -25,7 +25,6 @@ if (addItem && removeItem) {
   });
 }
 
-// Burger menu
 document.addEventListener("DOMContentLoaded", function () {
   const burgerWrapper = document.querySelector(".pop-header__burger-wrapper");
 
@@ -35,3 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document
+  .querySelectorAll(".balikovna-iframe-trigger")
+  .forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      const iframe = document.getElementById("balikovna-iframe");
+      iframe.classList.add("balikovna-iframe--visible");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+document
+  .querySelector(".balikovna-iframe__button")
+  .addEventListener("click", function () {
+    const iframe = document.getElementById("balikovna-iframe");
+    iframe.classList.remove("balikovna-iframe--visible");
+    document.body.style.overflow = "auto";
+  });

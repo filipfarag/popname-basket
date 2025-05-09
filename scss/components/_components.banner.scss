@@ -2,11 +2,13 @@
 
 html.pop-redesign {
   .pop-banner {
+    position: relative;
     @include pop-type-body-12-medium;
     background-color: var(--pop-color-cyan-500);
     color: var(--pop-color-neutral-800);
     cursor: default;
     padding: var(--pop-space-4) var(--pop-space-16);
     text-align: center;
+    z-index: 10;
   }
 }

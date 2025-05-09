@@ -1,6 +1,12 @@
 @use "../mixins/mixins.index" as *;
 
 html.pop-redesign {
+  --pop-header-height: 3.75rem;
+
+  @media (max-width: 650px) {
+    --pop-header-height: 4.625rem;
+  }
+
   .pop-header {
     --search-padding: var(--pop-space-12);
 
@@ -8,12 +14,11 @@ html.pop-redesign {
     top: 0;
     @include flex-container($justify: space-between);
     background-color: var(--pop-color-neutral-800);
-    height: 3.75rem;
+    height: var(--pop-header-height);
     padding-inline: var(--pop-space-48);
     z-index: 10;
 
     @include responsive(mobile) {
-      height: 4.5rem;
       padding: var(--pop-space-4) var(--pop-space-16);
     }
 
@@ -152,8 +157,7 @@ html.pop-redesign {
     }
 
     &--compact {
-      position: relative;
-
+      .pop-header__burger-wrapper,
       .pop-header__links-container,
       .pop-header__search-box {
         display: none;
@@ -161,7 +165,6 @@ html.pop-redesign {
     }
 
     @media (max-width: 650px) {
-      align-items: flex-start;
       flex-wrap: wrap;
       gap: var(--pop-space-8);
       height: initial;

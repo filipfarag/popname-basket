@@ -16,7 +16,7 @@
       Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
       zdarma kamkoliv v Česku.
     </section>
-    <header class="pop-header">
+    <header class="pop-header pop-header--compact">
       <div class="pop-header__inner">
         <button class="pop-header__burger-wrapper">
           <div class="pop-header__burger">
@@ -92,11 +92,26 @@
 
       <h1 class="step-heading">Doprava a platba</h1>
 
+      <div class="balikovna-iframe" id="balikovna-iframe">
+        <h1 class="balikovna-iframe__heading">Doprava a platba</h1>
+        <iframe
+          src="https://b2c.cpost.cz/locations/?type=BALIKOVNY"
+          title="Balikovna"
+        ></iframe>
+        <section class="d-flex ai-center jc-center u-py-24 u-width-100">
+          <a
+            class="pop-button pop-button--transparent balikovna-iframe__button"
+          >
+            <span>Zavřít</span>
+          </a>
+        </section>
+      </div>
+
       <section class="fulfillment">
         <h2 class="fulfillment__heading">Doprava</h2>
         <div class="fulfillment__container u-py-24">
           <h3 class="fulfillment__subheading">Česká pošta</h3>
-          <div class="pop-radio u-width-100 u-my-16">
+          <div class="pop-radio u-width-100 u-my-16 balikovna-iframe-trigger">
             <input
               class="pop-radio__input"
               type="radio"
@@ -120,7 +135,7 @@
             </label>
           </div>
           <div class="pop-basket__separator"></div>
-          <div class="pop-radio u-width-100 u-my-16">
+          <div class="pop-radio u-width-100 u-my-16 balikovna-iframe-trigger">
             <input
               class="pop-radio__input"
               type="radio"
@@ -142,6 +157,17 @@
               </div>
               <span class="fulfillment__price">49 Kč</span>
             </label>
+          </div>
+
+          <div class="fulfillment__delivery-detail">
+            <p class="pop-status pop-status--blue pop-status--small">
+              Dobříš Byliny čaje koření, Mírové náměstí 223, 26301, Dobříš
+            </p>
+            <button
+              class="balikovna-iframe-trigger fulfillment__change-delivery"
+            >
+              Změnit výdejní místo
+            </button>
           </div>
         </div>
 

@@ -672,6 +672,24 @@ html.pop-redesign {
       color: var(--pop-color-neutral-600);
     }
 
+    &__delivery-detail {
+      @include flex-container($direction: column, $align: flex-end);
+      gap: var(--pop-space-12);
+      padding-left: var(--pop-space-32);
+      width: 100%;
+    }
+
+    &__change-delivery {
+      @include pop-type-body-12-medium;
+      color: var(--pop-color-neutral-500);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--pop-color-neutral-700);
+        text-decoration: none;
+      }
+    }
+
     @media (max-width: 800px) {
       &__container {
         padding-inline: var(--pop-space-12);
@@ -681,5 +699,47 @@ html.pop-redesign {
         padding-left: 0;
       }
     }
+  }
+
+  .balikovna-iframe {
+    display: none;
+
+    &__heading {
+      @include pop-type-h1;
+      color: var(--pop-color-neutral-800);
+      margin-block: var(--pop-space-24);
+      text-align: center;
+
+      @media (max-width: 650px) {
+        @include pop-type-h2;
+      }
+    }
+
+    &__button {
+      width: 12.5rem;
+    }
+
+    &--visible {
+      position: fixed;
+      inset: 0;
+      top: var(--pop-header-height);
+      @include flex-container($direction: column);
+      background: var(--pop-color-neutral-white);
+      padding-inline: var(--pop-space-12);
+      z-index: 5;
+
+      iframe {
+        height: 100%;
+        background-color: var(--pop-color-neutral-white);
+        border-radius: 6px;
+        border: 1px solid var(--pop-color-neutral-300);
+        max-width: 100%;
+        width: var(--container-width);
+      }
+    }
+  }
+
+  &:has(.balikovna-iframe--visible) .pop-banner {
+    display: none;
   }
 }
