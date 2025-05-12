@@ -202,6 +202,10 @@ html.pop-redesign {
       &__search-medium {
         display: initial;
       }
+
+      &--compact {
+        height: var(--pop-header-height);
+      }
     }
   }
 }

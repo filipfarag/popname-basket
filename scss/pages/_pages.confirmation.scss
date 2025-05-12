@@ -1,0 +1,51 @@
+@use "../mixins/mixins.index" as *;
+
+html.pop-redesign {
+  .pop-confirmation {
+    @include flex-container($direction: column);
+    background-color: var(--pop-color-neutral-white);
+    border-bottom: 2px solid var(--pop-color-cyan-500);
+    margin: var(--pop-space-48) auto var(--pop-space-24);
+    max-width: 100%;
+    padding: var(--pop-space-80) var(--pop-space-24);
+    text-align: center;
+    width: var(--container-width);
+
+    &__heading {
+      @include pop-type-h1;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__number {
+      @include pop-type-h2;
+      background-color: var(--pop-color-neutral-800);
+      color: var(--pop-color-neutral-white);
+      margin-block: var(--pop-space-64) var(--pop-space-20);
+      padding: var(--pop-space-12) var(--pop-space-32);
+    }
+
+    &__label {
+      @include pop-type-body-16-medium;
+      color: var(--pop-color-neutral-800);
+    }
+
+    &__status {
+      margin-block: var(--pop-space-32) var(--pop-space-64);
+    }
+
+    @include responsive(mobile) {
+      margin-top: var(--pop-space-12);
+      padding-block: var(--pop-space-40);
+
+      &__heading {
+        @include pop-type-h2;
+      }
+
+      &__button.pop-button {
+        @include pop-type-body-16-bold;
+        min-height: 3.5rem;
+        width: 100%;
+      }
+    }
+  }
+}
