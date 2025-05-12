@@ -13,8 +13,8 @@
 
   <body>
     <section class="pop-banner">
-      Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
-      zdarma kamkoliv v Česku.
+      Poštovné je na nás. Nakup aspoň za 2500 Kč a my ti zásilku doručíme zdarma
+      kdekoliv v Česku.
     </section>
     <header class="pop-header pop-header--compact">
       <div class="pop-header__inner">
@@ -90,7 +90,7 @@
         </a>
       </section>
 
-      <h1 class="step-heading">Obsah tvého košíku</h1>
+      <h1 class="step-heading">Co máš v košíku?</h1>
 
       <section class="basket">
         <div class="basket-item">
@@ -104,20 +104,13 @@
                 >Nike SB x Riot Dunk Low Pro QS Mahogany</span
               >
               <div class="basket-item__selectors">
-                <div class="select-placeholder select-placeholder--size">
-                  US 9<svg
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    class="select-placeholder__chevron"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                    />
-                  </svg>
-                </div>
+                <select name="item-size" id="item-size">
+                  <option value="7">US 7</option>
+                  <option value="8">US 8</option>
+                  <option value="9">US 9</option>
+                  <option value="10">US 10</option>
+                  <option value="11">US 11</option>
+                </select>
                 <div class="quantity-picker">
                   <button
                     class="quantity-picker__button quantity-picker__button--inactive"
@@ -171,20 +164,13 @@
                 >Dime Classic Relaxed Denim Sand Indigo</span
               >
               <div class="basket-item__selectors">
-                <div class="select-placeholder select-placeholder--size">
-                  34<svg
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    class="select-placeholder__chevron"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                    />
-                  </svg>
-                </div>
+                <select name="item-size" id="item-size">
+                  <option value="8">US 8</option>
+                  <option value="9">US 9</option>
+                  <option value="10">US 10</option>
+                  <option value="11">US 11</option>
+                  <option value="12">US 12</option>
+                </select>
                 <div class="quantity-picker">
                   <button
                     class="quantity-picker__button quantity-picker__button--inactive"
@@ -252,7 +238,7 @@
               class="pop-input__field basket-price__input"
             />
             <button class="pop-button pop-button--neutral basket-price__button">
-              Uplatnit kód
+              Uplatním kód
             </button>
           </div>
         </div>

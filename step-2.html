@@ -13,8 +13,8 @@
 
   <body>
     <section class="pop-banner">
-      Poštovné? To jde na nás! Stačí nakoupit za 2 500 Kč a doručíme ti to
-      zdarma kamkoliv v Česku.
+      Poštovné je na nás. Nakup aspoň za 2500 Kč a my ti zásilku doručíme zdarma
+      kdekoliv v Česku.
     </section>
     <header class="pop-header pop-header--compact">
       <div class="pop-header__inner">
@@ -96,13 +96,15 @@
         <div class="basket-form">
           <h4 class="basket-form__heading">Adresa a kontakt</h4>
           <div class="basket-form__inner">
-            <div class="pop-input">
-              <span class="pop-input__label">Jméno</span>
-              <input type="text" id="name" class="pop-input__field" />
-            </div>
-            <div class="pop-input">
-              <span class="pop-input__label">Příjmení</span>
-              <input type="text" id="surname" class="pop-input__field" />
+            <div class="basket-form__name">
+              <div class="pop-input">
+                <span class="pop-input__label">Jméno</span>
+                <input type="text" id="name" class="pop-input__field" />
+              </div>
+              <div class="pop-input">
+                <span class="pop-input__label">Příjmení</span>
+                <input type="text" id="surname" class="pop-input__field" />
+              </div>
             </div>
             <div class="pop-input">
               <span class="pop-input__label"
@@ -126,45 +128,28 @@
             </div>
             <div class="pop-input">
               <span class="pop-input__label">Země</span>
-              <div class="select-placeholder">
-                Česko<svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  class="select-placeholder__chevron"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                  />
-                </svg>
-              </div>
+              <select name="country" id="country">
+                <option value="czechia">Česko</option>
+                <option value="slovakia">Slovensko</option>
+                <option value="belgium">Belgie</option>
+                <option value="bulgaria">Bulharsko</option>
+                <option value="croatia">Chorvatsko</option>
+              </select>
             </div>
             <div class="pop-input pop-input--error">
               <span class="pop-input__label">E-mail</span>
               <input type="text" id="email" class="pop-input__field" />
               <span class="pop-input__state"
-                >Prosím zadejte správnou e-mailovou adresu</span
+                >Zadej prosím platnou e-mailovou adresu.</span
               >
             </div>
             <div class="pop-input">
               <span class="pop-input__label">Telefonní číslo</span>
               <div class="d-flex">
-                <div class="select-placeholder select-placeholder--phone">
-                  +420<svg
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    class="select-placeholder__chevron"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                    />
-                  </svg>
-                </div>
+                <select name="phone-prefix" id="phone-prefix">
+                  <option value="420">+420</option>
+                  <option value="421">+421</option>
+                </select>
                 <input
                   type="number"
                   id="phone"
@@ -223,20 +208,13 @@
             </div>
             <div class="pop-input">
               <span class="pop-input__label">Země</span>
-              <div class="select-placeholder">
-                Česko<svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  class="select-placeholder__chevron"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                  />
-                </svg>
-              </div>
+              <select name="country" id="country">
+                <option value="czechia">Česko</option>
+                <option value="slovakia">Slovensko</option>
+                <option value="belgium">Belgie</option>
+                <option value="bulgaria">Bulharsko</option>
+                <option value="croatia">Chorvatsko</option>
+              </select>
             </div>
             <div class="pop-input">
               <span class="pop-input__label">IČ</span>
@@ -253,20 +231,10 @@
             <div class="pop-input">
               <span class="pop-input__label">Telefonní číslo</span>
               <div class="d-flex">
-                <div class="select-placeholder select-placeholder--phone">
-                  +420<svg
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    class="select-placeholder__chevron"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.79291 5.70712L3.20712 4.29291L8.50001 9.5858L13.7929 4.29291L15.2071 5.70712L8.50001 12.4142L1.79291 5.70712Z"
-                    />
-                  </svg>
-                </div>
+                <select name="phone-prefix" id="phone-prefix">
+                  <option value="420">+420</option>
+                  <option value="421">+421</option>
+                </select>
                 <input
                   type="number"
                   pattern="\d*"
@@ -288,7 +256,7 @@
                 class="pop-checkbox__label"
                 for="newsletter"
                 name="newsletter"
-                >Přeji si zasílat novinky a promo akce od Popname</label
+                >Chci odebírat novinky a promo akce od Popname</label
               >
             </div>
             <div class="pop-checkbox">

@@ -481,6 +481,13 @@ html.pop-redesign {
       row-gap: var(--pop-space-16);
     }
 
+    &__name {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: 1 / -1;
+      column-gap: var(--pop-space-24);
+    }
+
     &__city {
       display: grid;
       grid-template-columns: 1fr 5rem;
@@ -496,6 +503,10 @@ html.pop-redesign {
 
       &__inner {
         grid-template-columns: 1fr;
+      }
+
+      &__city {
+        gap: var(--pop-space-12);
       }
     }
   }
