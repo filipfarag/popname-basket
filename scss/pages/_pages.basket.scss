@@ -161,6 +161,17 @@ html.pop-redesign {
       }
     }
 
+    &:hover {
+      .step__number {
+        background-color: var(--pop-color-neutral-700);
+        color: var(--pop-color-neutral-700);
+      }
+
+      .step__label {
+        color: var(--pop-color-neutral-700);
+      }
+    }
+
     @media (max-width: 800px) {
       .step__number {
         @include pop-type-body-14-medium;
