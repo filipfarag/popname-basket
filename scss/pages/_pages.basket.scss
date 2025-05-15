@@ -519,6 +519,10 @@ html.pop-redesign {
       &__city {
         gap: var(--pop-space-12);
       }
+
+      &__name {
+        column-gap: var(--pop-space-12);
+      }
     }
   }
 
